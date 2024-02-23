@@ -1,9 +1,10 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Personal Blog"
-  site-url: "https://beamilz.com/"
+  site-url: "fralfaro.github.io/blog/"
   favicon: 'images/logo_fam2.png'
   image: 'images/doberman.png'
   page-footer:
