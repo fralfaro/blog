@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Francisco Alfaro">
+
+<title>Personal Blog - Fastpages</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo_fam2.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/doberman.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Personal Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fralfaro.github.io/portfolio/"><i class="bi bi-globe" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Fastpages</h1>
+            <p class="subtitle lead">Fastpages es una plataforma que te permite crear y alojar un blog con Jupyter Notebooks.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">python</div>
+                <div class="quarto-category">jupyter-notebooks</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
+      <div class="quarto-title-meta-contents">
+               <p>Francisco Alfaro </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">20 de agosto de 2021</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#fastpages" id="toc-fastpages" class="nav-link active" data-scroll-target="#fastpages">Fastpages</a>
+  <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
+  <li><a href="#primeros-pasos" id="toc-primeros-pasos" class="nav-link" data-scroll-target="#primeros-pasos">Primeros pasos</a>
+  <ul class="collapse">
+  <li><a href="#configurando-fastpages" id="toc-configurando-fastpages" class="nav-link" data-scroll-target="#configurando-fastpages">Configurando Fastpages</a></li>
+  </ul></li>
+  <li><a href="#estructura-de-fastpages" id="toc-estructura-de-fastpages" class="nav-link" data-scroll-target="#estructura-de-fastpages">Estructura de Fastpages</a></li>
+  <li><a href="#jupyter-notebooks-y-fastpages" id="toc-jupyter-notebooks-y-fastpages" class="nav-link" data-scroll-target="#jupyter-notebooks-y-fastpages">Jupyter Notebooks y Fastpages</a>
+  <ul class="collapse">
+  <li><a href="#opciones-a-través-de-frontmatter" id="toc-opciones-a-través-de-frontmatter" class="nav-link" data-scroll-target="#opciones-a-través-de-frontmatter">Opciones a través de FrontMatter</a></li>
+  <li><a href="#code-folding" id="toc-code-folding" class="nav-link" data-scroll-target="#code-folding">Code Folding</a></li>
+  <li><a href="#tablas-de-datos" id="toc-tablas-de-datos" class="nav-link" data-scroll-target="#tablas-de-datos">Tablas de datos</a></li>
+  <li><a href="#gráficos-interactivos-con-altair" id="toc-gráficos-interactivos-con-altair" class="nav-link" data-scroll-target="#gráficos-interactivos-con-altair">Gráficos interactivos con Altair</a></li>
+  </ul></li>
+  <li><a href="#otras-características" id="toc-otras-características" class="nav-link" data-scroll-target="#otras-características">Otras características</a>
+  <ul class="collapse">
+  <li><a href="#imágenes-con-leyenda" id="toc-imágenes-con-leyenda" class="nav-link" data-scroll-target="#imágenes-con-leyenda">Imágenes con leyenda</a></li>
+  <li><a href="#tweetcards" id="toc-tweetcards" class="nav-link" data-scroll-target="#tweetcards">Tweetcards</a></li>
+  <li><a href="#youtube-videos" id="toc-youtube-videos" class="nav-link" data-scroll-target="#youtube-videos">Youtube Videos</a></li>
+  <li><a href="#boxescallouts" id="toc-boxescallouts" class="nav-link" data-scroll-target="#boxescallouts">Boxes/Callouts</a></li>
+  </ul></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="fastpages" class="level1">
+<h1>Fastpages</h1>
+<p><a href="https://colab.research.google.com/github/fralfaro/portfolio/blob/main/docs/blog/posts/2022/2022-03-16-polars.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid" alt="Colab"></a> <a href="https://fralfaro.github.io/ds_blog/python/2022/03/16/polars.html"><img src="https://img.shields.io/static/v1?label=fastpages&amp;message=link&amp;color=57aeac&amp;labelColor=black&amp;style=flat&amp;logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAjCAYAAABhCKGoAAAGMklEQVR42q1Xa0xTVxyfKExlui9blszoB12yDzPGzJhtyT5s+zBxUxELBQSHm2ZzU5epBF/LclXae29pCxR5VEGgLQUuIOKDuClhm8oUK7S9ve19tLTl/fA5p9MNc/Y/hRYEzGLxJL/87zk9Ob/zf5++NGHMALzYgdDYmWh0Qly3Lybtwi6lXdpN2cWN5A0+hrQKe5R2PoN2uD+OKcn/UF5ZsVduMmyXVRi+jzebdmI5/juhwrgj3mTI2GA0vvsUIcMwM7GkOD42t7Mf6bqHkFry2yk7X5PXcxMVDN5DGtFf9NkJfe6W5iaUyFShjfV1KPlk7VPAa0k11WjzL+eRvMJ4IKQO0dw8SydJL+Op0u5cn+3tQTn+fqTivTbQpiavF0iG7iGt6NevKjpKpTbUo3hj+QO47XB8hfHfIGAelA+T6mqQzFi+e0oTKm3iexQnXaU56ZrK5SlVsq70LMF7TuX0XNTyvi1rThzLST3TgOCgxwD0DPwDGoE07QkcSl/m5ynbHWmZVm6b0sp9o2DZN8aTZtqk9w9b2G2HLbbvsjlx+fry0vwU0OS5SH68Ylmilny3c3x9SOvpRuQN7hO8vqulZQ6WJMuXFAzcRfkDd5BG8B1bpc+nU0+fQtgkYLIngOEJwGt/J9UxCIJg1whJ05Ul4IMejbsLqUUfOjJKQnCDr4ySHMeO1/UMIa3UmR9TUpj7ZdMFJK8yo6RaZjLAF/JqM/rifCO+yP4AycGmlgUaT9cZ0OYP2um5prjBLhtvLhy68Fs7RFqbRvSlf15ybGdyLcPJmcpfIcIuT4nqqt+Sa2vaZaby1FB+JGi1c9INhuiv9fpIysItIh3CVgVAzXfEE1evzse/bwr8bolcAXs+zcqKXksQc5+FD2D/svT06I8IYtaUeZLZzsVm+3oRDmON1Ok/2NKyIJSs0xnj84RknXG6zgGEE1It+rsPtrYuDOxBKAJLrO1qnW7+OpqeNxF4HWv6v4Rql3uFRvL/DATnc/29x4lmy2t4fXVjY+ASGwylm8DBvkSm2gpgx1Bpg4hyyysqVoUuFRw0z8+jXe40yiFsp1lpC9navlJpE9JIh7RVwfJywmKZO4Hkh02NZ1FilfkJLi1B4GhLPduAZGazHO9LGDX/WAj7+npzwUQqvuOBoo1Va91dj3Tdgyinc0Dae+HyIrxvc2npbCxlxrJvcW3CeSKDMhKCoexRYnUlSqg0xU0iIS5dXwzm6c/x9iKKEx8q2lkV5RARJCcm9We2sgsZhGZmgMYjJOU7UhpOIqhRwwlmEwrBZHgCBRKkKX4ySVvbmzQnXoSDHWCyS6SV20Ha+VaSFTiSE8/ttVheDe4NarLxVB1kdE0fYAgjGaOWGYD1vxKrqmInkSBchRkmiuC4KILhonAo4+9gWVHYnElQMEsAxbRDSHtp7dq5CRWly2VlZe/EFRcvDcBQvBTPZeXly1JMpvlThzBBRASBoDsSBIpgOBQV6C+sUJzffwflQX8BTevCTZMZeoslUo9QJJZYTZDw3RuIKtIhlhXdfhDoJ7TTXY/XdBBpgUshwFMSRYTVwim7FJvt6aFyOnoVKqc7MZQDzzNwsmnd3UegCudl8R2qzHZ7bJbQoYGyn692+zMULCfXenoOacTOTBUnJYRFsq+5+a3sjp5BXM6hEz7ObHNoVEIHyocekiX6WIiykwWDd1HhzT8RzY2YqxnK0HNQBJtW500ddiwrDgdIeCABZ4MPnKQdk9xDhUP3wfHSqbBI9v/e9jo0Iy30cCOgAMyVgMMVCMwql/cQxfKp2R1dWWrRm0PzUkrIXC9ykDY+hnJ5DqkE709guriwSRgGzWTQCPABWJZ6vbNHQlgo099+CCEMPnF6xnwynYETEWd8ls0WPUpSWnTrfuAhAWacPslUiQRNLBGXFSA7TrL8V3gNhesTnLFY0jb+bYWVp0i7SClY184jVtcayi7so2yuA0r4npbjsV8CJHZhPQ7no323cJ5w8FqpLwR/YJNRnHs0hNGs6ZFw/Lpsb+9oj/dZSbuL0XUNojx4d9Gch5mOT0ImINsdKyHzT9Muz1lcXhRWbo9a8J3B72H8Lg6+bKb1hyWMPeERBXMGRxEBCM7Ddfh/1jDuWhb5+QkAAAAASUVORK5CYII=.png" class="img-fluid"></a></p>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
+<p><img src="https://github.com/fastai/fastpages/raw/master/images/diagram.png" title="https://github.com/fastai/fastpages" class="img-fluid"></p>
+<p><a href="https://github.com/fastai/fastpages">Fastpages</a> es una plataforma que te permite crear y alojar un blog de forma gratuita, sin anuncios y con muchas funciones útiles, como:</p>
+<ul>
+<li>Cree publicaciones que contengan código, salidas de código (que pueden ser interactivas), texto formateado, etc. directamente desde <a href="https://jupyter.org/">Jupyter Notebooks</a>. Las publicaciones en notebooks admiten funciones como:
+<ul>
+<li>Las visualizaciones interactivas realizadas con Altair siguen siendo interactivas.</li>
+<li>Ocultar o mostrar la entrada y salida de la celda.</li>
+<li>Celdas de código contraíbles que están abiertas o cerradas de forma predeterminada.</li>
+<li>Defina el título, el resumen y otros metadatos a través de celdas de rebajas especiales</li>
+<li>Posibilidad de agregar enlaces a Colab y GitHub automáticamente.</li>
+</ul></li>
+<li>Cree publicaciones, incluido el formato y las imágenes, directamente desde documentos de Microsoft Word.</li>
+<li>Cree y edite publicaciones de <a href="https://guides.github.com/features/mastering-markdown/">Markdown</a> completamente en línea usando el editor de Markdown incorporado de GitHub.</li>
+<li>Inserta tarjetas de Twitter y videos de YouTube.</li>
+<li>Categorización de publicaciones de blog por etiquetas proporcionadas por el usuario para mayor visibilidad.</li>
+</ul>
+<p>En esta sección se enseñará los pasos básicos para poder crear su propio blog con fastpages.</p>
+</section>
+<section id="primeros-pasos" class="level2">
+<h2 class="anchored" data-anchor-id="primeros-pasos">Primeros pasos</h2>
+<section id="configurando-fastpages" class="level3">
+<h3 class="anchored" data-anchor-id="configurando-fastpages">Configurando Fastpages</h3>
+<p>¡El proceso de configuración de páginas rápidas también está automatizado con <a href="https://github.com/features/actions">GitHub Actions</a>! Al crear un repositorio a partir de la plantilla de páginas rápidas, se abrirá automáticamente una solicitud de extracción (después de ~ 30 segundos) configurando su blog para que pueda comenzar a funcionar. La solicitud de extracción automatizada lo recibirá con instrucciones como esta: <img src="https://i.imgur.com/JhkIip8.png" class="img-fluid" alt="Imgur"></p>
+<p>¡Todo lo que tienes que hacer es seguir estas instrucciones (en el PR que recibes) y tu nuevo sitio de blogs estará en funcionamiento!</p>
+<blockquote class="blockquote">
+<p>Note: Si tienes dudas con la instalación, te recomiendo ver el siguiente <a href="https://youtu.be/sepml4GLLSM?t=402">video</a>.</p>
+</blockquote>
+</section>
+</section>
+<section id="estructura-de-fastpages" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-de-fastpages">Estructura de Fastpages</h2>
+<p>El repositorio de fastpages esta compuesto de la siguiente forma:</p>
+<pre><code>├── .github
+├── _action_files
+├── _fastpages_docs
+├── images
+├── _includes
+├── _layouts
+├── _notebooks
+├── _pages
+├── _plugins
+├── _posts
+├── _sass
+└── _word
+└── .devcontainer.json
+└── Makefile
+└── index.html
+└── Gemfile
+└── _config.yml
+└── LICENSE
+└── docker-compose.yml
+└── Gemfile.lock
+└── README.md
+└── .gitattributes
+└── .gitignore</code></pre>
+<p>De momento nos vamos a centrar en algunos de estos archivos:</p>
+<ul>
+<li><p><code>_config.yml</code>: es el archivo que funciona como el motor del proyecto. En ente archivo, podemos poner el nombre a nuestro blog, el logo, información personal (github, linkedin, etc), entre otras cosas.</p></li>
+<li><p><code>index.html</code>: Corresponde a la primera página cuando se despliega nuestro blog. por lo que es importante escribir algún mensaje para especificar la motivación de hacer un blog.</p></li>
+<li><p><code>/_notebooks</code>: Lugar donde se deben guardar los notebooks (<code>.ipynb</code>) con la convención de nomenclatura **YYYY-MM-DD-*.ipynb**.</p></li>
+<li><p><code>/_posts</code>: Lugar donde se deben guardar los archivos markdown (<code>.md</code>) con la convención de nomenclatura **YYYY-MM-DD-*.md**.</p></li>
+<li><p><code>/_word</code>: Lugar donde se deben guardar los archivos word (<code>.docx</code>) con la convención de nomenclatura **YYYY-MM-DD-*.docx**.</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>Note: fastpages usa <a href="https://nbdev.fast.ai/index.html">nbdev</a> para impulsar el proceso de conversión de Jupyter Notebooks en publicaciones de blog. Cuando guardas un notebook en la carpeta <code>/_notebooks</code> de tu repositorio, GitHub Actions aplica <code>nbdev</code> a esos notebooks automáticamente. El mismo proceso ocurre cuando guarda documentos de Word o markdown en el directorio <code>_word</code> o<code>_posts</code>, respectivamente.</p>
+</blockquote>
+</section>
+<section id="jupyter-notebooks-y-fastpages" class="level2">
+<h2 class="anchored" data-anchor-id="jupyter-notebooks-y-fastpages">Jupyter Notebooks y Fastpages</h2>
+<p>En esta parte, se muestran características especiales que fastpages proporciona para los notebooks. También puede escribir las publicaciones de su blog con documentos de Word o makdown.</p>
+<section id="opciones-a-través-de-frontmatter" class="level3">
+<h3 class="anchored" data-anchor-id="opciones-a-través-de-frontmatter">Opciones a través de FrontMatter</h3>
+<p>La primera celda de su Jupyter Notebook o markdown contiene información preliminar. El tema principal son los metadatos que pueden activar/desactivar opciones en su Notebook. Tiene el formato siguiente:</p>
+<pre><code># Title
+&gt; Awesome summary
+
+- toc: true
+- branch: master
+- badges: true
+- comments: true
+- author: Hamel Husain &amp; Jeremy Howard
+- categories: [fastpages, jupyter]</code></pre>
+<p><strong>Todas las configuraciones anteriores están habilitadas en esta publicación, ¡para que pueda ver cómo se ven!</strong></p>
+<ul>
+<li>El campo de resumen (precedido por <code>&gt;</code>) se mostrará debajo de su título y también lo utilizarán las redes sociales para mostrar la descripción de su página.</li>
+<li><code>toc</code>: establecer esto en <code>true</code> generará automáticamente una tabla de contenido</li>
+<li><code>badges</code>: establecer esto en <code>true</code> mostrará los enlaces de Google Colab y GitHub en la publicación de su blog.</li>
+<li><code>comments</code>: establecer esto en <code>true</code> habilitará los comentarios. Consulte <a href="https://github.com/fastai/fastpages#enabling-comments">estas instrucciones</a> para obtener más detalles.</li>
+<li><code>autor</code>: esto mostrará los nombres de los autores.</li>
+<li><code>categories</code>: permitirá que su publicación sea categorizada en una página de “Etiquetas”, donde los lectores pueden navegar por su publicación por categorías.</li>
+</ul>
+<p><em>Markdown Front Matters tiene un formato similar al de los notebooks. Las diferencias entre los dos se puede ver en el siguiente <a href="https://github.com/fastai/fastpages#front-matter-related-options">link</a>.</em></p>
+</section>
+<section id="code-folding" class="level3">
+<h3 class="anchored" data-anchor-id="code-folding">Code Folding</h3>
+<p>coloque una marca <code># collapse-hide</code> en la parte superior de cualquier celda si desea <strong>ocultar</strong> esa celda de forma predeterminada, pero déle al lector la opción de mostrarla:</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#hide</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pandas altair</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Requirement already satisfied: pandas in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (1.3.1)
+Requirement already satisfied: altair in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (4.1.0)
+Requirement already satisfied: pytz&gt;=2017.3 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from pandas) (2021.1)
+Requirement already satisfied: numpy&gt;=1.17.3 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from pandas) (1.21.1)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from pandas) (2.8.2)
+Requirement already satisfied: six&gt;=1.5 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from python-dateutil&gt;=2.7.3-&gt;pandas) (1.16.0)
+Requirement already satisfied: jinja2 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from altair) (3.0.1)
+Requirement already satisfied: toolz in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from altair) (0.11.1)
+Requirement already satisfied: entrypoints in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from altair) (0.3)
+Requirement already satisfied: jsonschema in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from altair) (3.2.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from jinja2-&gt;altair) (2.0.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from jsonschema-&gt;altair) (21.2.0)
+Requirement already satisfied: setuptools in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from jsonschema-&gt;altair) (57.1.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/lib/python3.8/site-packages (from jsonschema-&gt;altair) (0.18.0)
+WARNING: You are using pip version 21.1.3; however, version 21.2.2 is available.
+You should consider upgrading via the '/home/fralfaro/.cache/pypoetry/virtualenvs/rise-example-Z8sxMVFk-py3.8/bin/python -m pip install --upgrade pip' command.</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> altair <span class="im">as</span> alt</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>coloque una marca <code># collapse-show</code> en la parte superior de cualquier celda si desea <strong>mostrar</strong> esa celda de forma predeterminada, pero déle al lector la opción de ocultarla:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-show</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cars <span class="op">=</span> <span class="st">'https://vega.github.io/vega-datasets/data/cars.json'</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>movies <span class="op">=</span> <span class="st">'https://vega.github.io/vega-datasets/data/movies.json'</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>sp500 <span class="op">=</span> <span class="st">'https://vega.github.io/vega-datasets/data/sp500.csv'</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>stocks <span class="op">=</span> <span class="st">'https://vega.github.io/vega-datasets/data/stocks.csv'</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>flights <span class="op">=</span> <span class="st">'https://vega.github.io/vega-datasets/data/flights-5k.json'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Si desea ocultar las celdas por completo (no solo contraerlas), <a href="https://github.com/fastai/fastpages#hide-inputoutput-cells">lea estas instrucciones</a>.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># hide</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(movies) <span class="co"># load movies data</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> [x.replace(<span class="st">' '</span>, <span class="st">'_'</span>) <span class="cf">for</span> x <span class="kw">in</span> df.columns.values]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>genres <span class="op">=</span> df[<span class="st">'Major_Genre'</span>].unique() <span class="co"># get unique field values</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>genres <span class="op">=</span> <span class="bu">list</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> d: d <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span>, genres)) <span class="co"># filter out None values</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>genres.sort() <span class="co"># sort alphabetically</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="tablas-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="tablas-de-datos">Tablas de datos</h3>
+<p>Puede mostrar tablas de la forma habitual en su blog:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># display table with pandas</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df[[<span class="st">'Title'</span>, <span class="st">'Worldwide_Gross'</span>, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Production_Budget'</span>, <span class="st">'IMDB_Rating'</span>]].head()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Worldwide_Gross</th>
+      <th>Production_Budget</th>
+      <th>IMDB_Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>The Land Girls</td>
+      <td>146083.0</td>
+      <td>8000000.0</td>
+      <td>6.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>First Love, Last Rites</td>
+      <td>10876.0</td>
+      <td>300000.0</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>I Married a Strange Person</td>
+      <td>203134.0</td>
+      <td>250000.0</td>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Let's Talk About Sex</td>
+      <td>373615.0</td>
+      <td>300000.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Slam</td>
+      <td>1087521.0</td>
+      <td>1000000.0</td>
+      <td>3.4</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="gráficos-interactivos-con-altair" class="level3">
+<h3 class="anchored" data-anchor-id="gráficos-interactivos-con-altair">Gráficos interactivos con Altair</h3>
+<p>¡Las visualizaciones interactivas realizadas con <a href="https://altair-viz.github.io/">Altair</a> siguen siendo interactivas!</p>
+<p>Dejamos esta celda de abajo sin ocultar para que pueda disfrutar de una vista previa del resaltado de sintaxis en páginas rápidas, que utiliza el <a href="https://draculatheme.com/">tema de drácula</a>.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># select a point for which to provide details-on-demand</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>label <span class="op">=</span> alt.selection_single(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    encodings<span class="op">=</span>[<span class="st">'x'</span>], <span class="co"># limit selection to x-axis value</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    on<span class="op">=</span><span class="st">'mouseover'</span>,  <span class="co"># select on mouseover events</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    nearest<span class="op">=</span><span class="va">True</span>,    <span class="co"># select data point nearest the cursor</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    empty<span class="op">=</span><span class="st">'none'</span>     <span class="co"># empty selection includes no data points</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co"># define our base line chart of stock prices</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> alt.Chart().mark_line().encode(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    alt.X(<span class="st">'date:T'</span>),</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    alt.Y(<span class="st">'price:Q'</span>, scale<span class="op">=</span>alt.Scale(<span class="bu">type</span><span class="op">=</span><span class="st">'log'</span>)),</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    alt.Color(<span class="st">'symbol:N'</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>alt.layer(</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    base, <span class="co"># base line chart</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add a rule mark to serve as a guide line</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    alt.Chart().mark_rule(color<span class="op">=</span><span class="st">'#aaa'</span>).encode(</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span><span class="st">'date:T'</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    ).transform_filter(label),</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add circle marks for selected time points, hide unselected points</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    base.mark_circle().encode(</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        opacity<span class="op">=</span>alt.condition(label, alt.value(<span class="dv">1</span>), alt.value(<span class="dv">0</span>))</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    ).add_selection(label),</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add white stroked text to provide a legible background for labels</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>    base.mark_text(align<span class="op">=</span><span class="st">'left'</span>, dx<span class="op">=</span><span class="dv">5</span>, dy<span class="op">=-</span><span class="dv">5</span>, stroke<span class="op">=</span><span class="st">'white'</span>, strokeWidth<span class="op">=</span><span class="dv">2</span>).encode(</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">'price:Q'</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>    ).transform_filter(label),</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add text labels for stock prices</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>    base.mark_text(align<span class="op">=</span><span class="st">'left'</span>, dx<span class="op">=</span><span class="dv">5</span>, dy<span class="op">=-</span><span class="dv">5</span>).encode(</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>        text<span class="op">=</span><span class="st">'price:Q'</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>    ).transform_filter(label),</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>stocks</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>).properties(</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">500</span>,</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">400</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+
+<div id="altair-viz-1593074be1ea49828044818ee55ec6a8"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-1593074be1ea49828044818ee55ec6a8") {
+      outputDiv = document.getElementById("altair-viz-1593074be1ea49828044818ee55ec6a8");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "line", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}}, {"mark": {"type": "rule", "color": "#aaa"}, "encoding": {"x": {"type": "temporal", "field": "date"}}, "transform": [{"filter": {"selection": "selector001"}}]}, {"mark": "circle", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "opacity": {"condition": {"value": 1, "selection": "selector001"}, "value": 0}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "selection": {"selector001": {"type": "single", "encodings": ["x"], "on": "mouseover", "nearest": true, "empty": "none"}}}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "stroke": "white", "strokeWidth": 2}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector001"}}]}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector001"}}]}], "data": {"url": "https://vega.github.io/vega-datasets/data/stocks.csv"}, "height": 400, "width": 500, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script>
+</div>
+</div>
+<p><img src="../images/visualization.svg" title="https://github.com/fastai/fastpages" class="img-fluid"></p>
+</section>
+</section>
+<section id="otras-características" class="level2">
+<h2 class="anchored" data-anchor-id="otras-características">Otras características</h2>
+<p>Al escribir <code>Le doy a esta publicación dos :+1:!</code> Se mostrará esto:</p>
+<p>Le doy a esta publicación dos :+1:!</p>
+<section id="imágenes-con-leyenda" class="level3">
+<h3 class="anchored" data-anchor-id="imágenes-con-leyenda">Imágenes con leyenda</h3>
+<p>Puede incluir imágenes de rebajas con leyenda (<code>caption</code>) como este:</p>
+<pre><code>![](https://www.fast.ai/images/fastai_paper/show_batch.png "Credit: https://www.fast.ai/2020/02/13/fastai-A-Layered-API-for-Deep-Learning/")</code></pre>
+<p><img src="https://www.fast.ai/images/fastai_paper/show_batch.png" title="Credit: https://www.fast.ai/2020/02/13/fastai-A-Layered-API-for-Deep-Learning/" class="img-fluid"></p>
+<p>Por supuesto, la leyenda es opcional.</p>
+</section>
+<section id="tweetcards" class="level3">
+<h3 class="anchored" data-anchor-id="tweetcards">Tweetcards</h3>
+<p>Si escribe <code>&gt; twitter: https://twitter.com/jakevdp/status/1204765621767901185?s=20</code> mostrará esto:</p>
+<blockquote class="blockquote">
+<p>twitter: https://twitter.com/jakevdp/status/1204765621767901185?s=20</p>
+</blockquote>
+</section>
+<section id="youtube-videos" class="level3">
+<h3 class="anchored" data-anchor-id="youtube-videos">Youtube Videos</h3>
+<p>Si escribe <code>&gt; youtube: https://youtu.be/XfoYk_Z5AkI</code> mostrará esto:</p>
+<blockquote class="blockquote">
+<p>youtube: https://youtu.be/XfoYk_Z5AkI</p>
+</blockquote>
+</section>
+<section id="boxescallouts" class="level3">
+<h3 class="anchored" data-anchor-id="boxescallouts">Boxes/Callouts</h3>
+<p>Puedes ejecutar algunas cajas con mensajes de nota, información o warning!. A continuación se muestran algunos ejemplos:</p>
+<p><code>&gt; Warning: There will be no second warning!</code> &gt; Warning: There will be no second warning!</p>
+<p><code>&gt; Important: Pay attention! It's important.</code></p>
+<blockquote class="blockquote">
+<p>Important: Pay attention! It’s important.</p>
+</blockquote>
+<p><code>&gt; Tip: This is my tip.</code></p>
+<blockquote class="blockquote">
+<p>Tip: This is my tip.</p>
+</blockquote>
+<p><code>&gt; Note: Take note of this.</code></p>
+<blockquote class="blockquote">
+<p>Note: Take note of this.</p>
+</blockquote>
+</section>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://github.com/fastai/fastpages">Repositorio: fastpages</a></li>
+<li><a href="https://github.com/fastai/nbdev">nbdev: notebooks a posts</a></li>
+<li><a href="https://forums.fast.ai/c/fastai-users/nbdev/">Fastai: foro</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/beamilz\.com\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Website made with <a href="https://quarto.org/">Quarto</a>, by Francisco Alfaro. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fralfaro.github.io/portfolio/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Francisco Alfaro">
+
+<title>Personal Blog - Compartir datos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/logo_fam2.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/doberman.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Personal Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/"><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fralfaro.github.io/portfolio/"><i class="bi bi-globe" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div class="quarto-toggle-container">
+                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+              </div>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Compartir datos</h1>
+            <p class="subtitle lead">Cómo Compartir Datos de Manera Efectiva (desde el punto de vista estadístico) y no morir en el intento.</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">python</div>
+                <div class="quarto-category">data-analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Autor/a</div>
+      <div class="quarto-title-meta-contents">
+               <p>Francisco Alfaro </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Fecha de publicación</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">26 de octubre de 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#cómo-compartir-datos-de-manera-efectiva" id="toc-cómo-compartir-datos-de-manera-efectiva" class="nav-link active" data-scroll-target="#cómo-compartir-datos-de-manera-efectiva">Cómo Compartir Datos de Manera Efectiva</a>
+  <ul class="collapse">
+  <li><a href="#elementos-esenciales-para-una-colaboración-exitosa" id="toc-elementos-esenciales-para-una-colaboración-exitosa" class="nav-link" data-scroll-target="#elementos-esenciales-para-una-colaboración-exitosa">Elementos Esenciales para una Colaboración Exitosa</a>
+  <ul class="collapse">
+  <li><a href="#datos-en-su-estado-original-raw-data" id="toc-datos-en-su-estado-original-raw-data" class="nav-link" data-scroll-target="#datos-en-su-estado-original-raw-data">Datos en su Estado Original (raw data)</a></li>
+  <li><a href="#conjunto-de-datos-ordenado-tidy-data-set" id="toc-conjunto-de-datos-ordenado-tidy-data-set" class="nav-link" data-scroll-target="#conjunto-de-datos-ordenado-tidy-data-set">Conjunto de datos ordenado (tidy data set)</a></li>
+  <li><a href="#detalles-del-conjunto-de-datos" id="toc-detalles-del-conjunto-de-datos" class="nav-link" data-scroll-target="#detalles-del-conjunto-de-datos">Detalles del Conjunto de Datos</a></li>
+  <li><a href="#la-lista-de-instruccionesscript" id="toc-la-lista-de-instruccionesscript" class="nav-link" data-scroll-target="#la-lista-de-instruccionesscript">La Lista de Instrucciones/Script</a></li>
+  <li><a href="#lo-que-debes-esperar-del-analista" id="toc-lo-que-debes-esperar-del-analista" class="nav-link" data-scroll-target="#lo-que-debes-esperar-del-analista">Lo que Debes Esperar del Analista</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="cómo-compartir-datos-de-manera-efectiva" class="level1">
+<h1>Cómo Compartir Datos de Manera Efectiva</h1>
+<p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/share.png" width="200" align="center"></p>
+<p><br></p>
+<p>Esta guía está diseñada para todos aquellos que necesitan colaborar con un estadístico o científico de datos en el proceso de análisis de datos. Nuestro público objetivo abarca:</p>
+<ol type="1">
+<li>Colaboradores que requieren análisis estadísticos o de datos para sus proyectos.</li>
+<li>Estudiantes o posdoctorados en diversas disciplinas en busca de asesoramiento y consultoría.</li>
+<li>Estudiantes de estadística junior que desempeñan un papel crucial en la recopilación, limpieza y preparación de conjuntos de datos.</li>
+</ol>
+<p>El propósito de esta guía es ofrecer pautas y recomendaciones para compartir datos de manera eficiente, evitando errores comunes y retrasos en la transición desde la recopilación de datos hasta su análisis.</p>
+<p>Sostenemos firmemente la idea de que los estadísticos deben ser capaces de trabajar con los datos en cualquier estado en el que se encuentren.</p>
+<p>Es esencial examinar los datos en su estado crudo, comprender los pasos involucrados en su procesamiento y poder identificar fuentes ocultas de variabilidad en el análisis de datos. Sin embargo, para muchos tipos de datos, los pasos de procesamiento están bien documentados y estandarizados. Por lo tanto, la labor de transformar los datos desde su forma original a una forma directamente analizable puede realizarse antes de involucrar a un estadístico.</p>
+<p>Esta práctica puede acelerar significativamente el tiempo de respuesta, ya que el estadístico no tendrá que ocuparse de todos los pasos de preprocesamiento inicialmente.</p>
+<section id="elementos-esenciales-para-una-colaboración-exitosa" class="level2">
+<h2 class="anchored" data-anchor-id="elementos-esenciales-para-una-colaboración-exitosa">Elementos Esenciales para una Colaboración Exitosa</h2>
+<p>Si deseas asegurar un análisis eficiente y oportuno, es fundamental proporcionar al estadístico la siguiente información:</p>
+<ol type="1">
+<li><strong>Datos en su Estado Original</strong> (raw data): Esto incluye los datos sin procesar, tal como se recopilaron, sin ningún tipo de transformación o manipulación. Al brindar los datos en su forma bruta, permites al estadístico comprender la fuente y la calidad de la información.</li>
+<li><strong>Conjunto de Datos Ordenado</strong> (Tidy Data Set): Un conjunto de datos ordenado sigue los principios del “Tidy Data”, lo que significa que se organiza de manera que cada variable se encuentre en una columna y cada observación en una fila. Esta estructura facilita el análisis y la interpretación de los datos de manera efectiva.</li>
+<li><strong>Detalles del Conjunto de Datos</strong>: Se debe describir minuciosamente cada variable presente en el conjunto de datos ordenado, incluyendo información sobre los valores que pueden tomar. Proporcionar un libro de códigos es esencial para que el estadístico comprenda la naturaleza de las variables y cómo interpretarlas correctamente.</li>
+<li><strong>Lista de Instrucciones</strong> (script): Es crucial suministrar una descripción detallada de los pasos exactos que seguiste para transformar los datos desde su estado original hasta el conjunto de datos ordenado. Esto garantiza la reproducibilidad y una comprensión completa de tu proceso por parte del estadístico.</li>
+</ol>
+<section id="datos-en-su-estado-original-raw-data" class="level3">
+<h3 class="anchored" data-anchor-id="datos-en-su-estado-original-raw-data">Datos en su Estado Original (raw data)</h3>
+<p>Uno de los elementos fundamentales en cualquier análisis de datos es la inclusión de los datos en su forma más “cruda” y original. Esto garantiza que la procedencia de los datos se mantenga intacta a lo largo de todo el proceso de trabajo. Aquí te proporcionamos ejemplos de lo que se entiende por datos en su estado más “crudo”:</p>
+<ul>
+<li>Un enigmático archivo binario generado por tu máquina de medición.</li>
+<li>Un archivo de Excel sin procesar con 10 hojas de trabajo que has recibido de la empresa con la que colaboras.</li>
+<li>Complejos datos en formato JSON que has extraído al hacer web scraping de la API de Twitter.</li>
+<li>Números ingresados manualmente mientras observabas a través de un microscopio.</li>
+</ul>
+<p>Puedes considerar que los datos están en su formato crudo si:</p>
+<ol type="1">
+<li>No se ha aplicado ningún software a los datos.</li>
+<li>Los valores de los datos no han sido alterados.</li>
+<li>No se ha eliminado ninguna parte de los datos del conjunto.</li>
+<li>Los datos no han sido resumidos o transformados de ninguna manera.</li>
+</ol>
+<p>Si realizaste alguna modificación en los datos en bruto, estos ya no se consideran en su forma cruda. Reportar datos modificados como datos en bruto es una práctica común que puede ralentizar significativamente el proceso de análisis, ya que el analista a menudo debe realizar un examen minucioso de tus datos para comprender por qué los datos en su forma cruda parecen inusuales. (Imagina también cómo impactaría en futuros análisis si llegan nuevos datos). Mantener la integridad de los datos en su forma cruda es esencial para un análisis sólido y confiable.</p>
+<p>Claro, te proporcionaré un ejemplo práctico y aplicado en Python que ilustra los principios de datos ordenados (tidy data) de Hadley Wickham. En este ejemplo, trabajaremos con un conjunto de datos de resultados de exámenes médicos para varios pacientes.</p>
+<p><strong>Ejemplo Práctico</strong></p>
+<p>Supongamos que tenemos un conjunto de datos de resultados de exámenes médicos para tres pacientes en una clínica. Los exámenes incluyen mediciones de presión arterial (sistólica y diastólica), nivel de glucosa y nivel de colesterol. El conjunto de datos se ve de la siguiente manera:</p>
+<table class="table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 27%">
+<col style="width: 28%">
+<col style="width: 12%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Paciente</th>
+<th>Presion_Sistolica</th>
+<th>Presion_Diastolica</th>
+<th>Glucosa</th>
+<th>Colesterol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>120</td>
+<td>80</td>
+<td>95</td>
+<td>180</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>130</td>
+<td>85</td>
+<td>105</td>
+<td>190</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>115</td>
+<td>75</td>
+<td>90</td>
+<td>170</td>
+</tr>
+</tbody>
+</table>
+<p>Estos datos están sin procesar, tal como se recopilarían de los pacientes.</p>
+</section>
+<section id="conjunto-de-datos-ordenado-tidy-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="conjunto-de-datos-ordenado-tidy-data-set">Conjunto de datos ordenado (tidy data set)</h3>
+<p>Los principios generales de los datos ordenados (tidy data) son presentados por <a href="http://had.co.nz/">Hadley Wickham</a> en <a href="http://vita.had.co.nz/papers/tidy-data.pdf">este artículo</a> y <a href="http://vimeo.com/33727555">este video</a>. Aunque tanto el artículo como el video describen los datos ordenados utilizando <a href="http://www.r-project.org/">R</a>, los principios son aplicables de manera más general:</p>
+<ol type="1">
+<li>Cada variable que mides debe estar en una columna.</li>
+<li>Cada observación diferente de esa variable debe estar en una fila diferente.</li>
+<li>Debe haber una tabla para cada “tipo” de variable.</li>
+<li>Si tienes varias tablas, deben incluir una columna en la tabla que permita unirlas o combinarlas.</li>
+</ol>
+<p>La idea detrás de los datos ordenados es que los datos se organicen de manera que sea fácil identificar y seleccionar variables, así como realizar análisis de manera eficiente. Siguiendo estos principios, se logra una estructura de datos que es intuitiva y facilita el trabajo de los analistas y científicos de datos, ya que no necesitan descifrar la estructura de los datos en cada proyecto. También se promueve el uso de nombres descriptivos para las variables, lo que mejora la comprensión de los datos por parte de otros colaboradores.</p>
+<p><strong>Ejemplo Práctico</strong></p>
+<p>Continuando con el ejemplo, tenemos cuatro variables: Paciente, Presion_Sistolica, Presion_Diastolica, Glucosa y Colesterol. Así que, creamos un conjunto de datos ordenado donde cada una de estas variables tiene su propia columna:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Paciente</th>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Presion_Sistolica</td>
+<td>120</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Presion_Diastolica</td>
+<td>80</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Glucosa</td>
+<td>95</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Colesterol</td>
+<td>180</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Presion_Sistolica</td>
+<td>130</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Presion_Diastolica</td>
+<td>85</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Glucosa</td>
+<td>105</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Colesterol</td>
+<td>190</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Presion_Sistolica</td>
+<td>115</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Presion_Diastolica</td>
+<td>75</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Glucosa</td>
+<td>90</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Colesterol</td>
+<td>170</td>
+</tr>
+</tbody>
+</table>
+<p>Esto es un conjunto de datos ordenado porque cumple con las reglas mencionadas anteriormente.</p>
+</section>
+<section id="detalles-del-conjunto-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="detalles-del-conjunto-de-datos">Detalles del Conjunto de Datos</h3>
+<p>Para casi cualquier conjunto de datos, las mediciones que calculas necesitarán ser descritas con más detalle de lo que puedes o debes incluir en la hoja de cálculo. El libro de códigos contiene esta información. Como mínimo, debería contener:</p>
+<ol type="1">
+<li>Información sobre las variables (¡incluyendo unidades!) en el conjunto de datos que no están contenidas en los datos ordenados (tidy data).</li>
+<li>Información sobre las elecciones de resumen que hiciste.</li>
+<li>Información sobre el diseño experimental que utilizaste.</li>
+</ol>
+<p><strong>Ejemplo Práctico</strong></p>
+<p><strong>Información sobre las Variables:</strong></p>
+<p>En nuestro ejemplo de resultados de exámenes médicos, tenemos los detalles adicionales sobre las variables:</p>
+<ul>
+<li><strong>Presion_Sistolica</strong>: Presión arterial sistólica medida en mmHg (milímetros de mercurio).</li>
+<li><strong>Presion_Diastolica</strong>: Presión arterial diastólica medida en mmHg.</li>
+<li><strong>Glucosa</strong>: Nivel de glucosa en sangre medido en mg/dL (miligramos por decilitro).</li>
+<li><strong>Colesterol</strong>: Nivel de colesterol en sangre medido en mg/dL.</li>
+</ul>
+<p>Estos detalles son importantes para que otros comprendan las unidades de medida y la naturaleza de las variables.</p>
+<p><strong>Información sobre las Elecciones de Resumen:</strong></p>
+<p>Si realizaste alguna operación de resumen en los datos, como el cálculo de promedios o medianas, debes explicar estas elecciones en el libro de códigos. Por ejemplo, si calculaste el promedio de la presión arterial sistólica para resumir los datos, debes mencionarlo y proporcionar la fórmula utilizada.</p>
+<ul>
+<li><strong>Promedio de la presión sistólica</strong>: Se calculó como la media de todas las mediciones de presión sistólica en el conjunto de datos.
+<ul>
+<li>Promedio de la presión sistólica = (Suma de todas las mediciones de presión sistólica) / (Número de pacientes)</li>
+</ul></li>
+<li><strong>Mediana de la presión diastólica</strong>: Se calculó como la mediana de todas las mediciones de presión diastólica en el conjunto de datos.
+<ul>
+<li>Mediana de la presión diastólica = Valor central cuando las mediciones se ordenan de menor a mayor</li>
+</ul></li>
+</ul>
+<p><strong>Información sobre el Diseño Experimental:</strong></p>
+<p>Se debe incluir detalles sobre cómo se recopilaron los datos y el diseño experimental subyacente. Por ejemplo, si los datos se recopilaron de pacientes en un estudio clínico, debes describir cómo se seleccionaron los pacientes, si hubo aleatorización en los tratamientos, y cualquier otro detalle relevante sobre el diseño del estudio.</p>
+<ul>
+<li><p><strong>Selección de Pacientes:</strong> Los pacientes fueron seleccionados de un centro de atención médica en el que se atienden personas con afecciones cardiovasculares. La selección de pacientes se realizó de manera no aleatoria, y se incluyeron aquellos que cumplieron con los siguientes criterios de inclusión: diagnóstico de enfermedad cardiovascular confirmado, disponibilidad de datos de presión arterial, niveles de glucosa y colesterol, y consentimiento para participar en el estudio.</p></li>
+<li><p><strong>Aleatorización en Tratamientos:</strong> En este estudio, no se aplicó aleatorización en los tratamientos. Los pacientes recibieron el tratamiento médico habitual según las pautas clínicas establecidas por sus médicos tratantes. Por lo tanto, no se realizaron intervenciones experimentales ni asignaciones aleatorias de tratamientos.</p></li>
+<li><p><strong>Recopilación de Datos:</strong> Los datos se recopilaron mediante la revisión de los registros médicos electrónicos de los pacientes. Se registraron las mediciones de presión arterial sistólica y diastólica, los niveles de glucosa en sangre y los niveles de colesterol en momentos específicos de las consultas médicas de los pacientes.</p></li>
+</ul>
+</section>
+<section id="la-lista-de-instruccionesscript" class="level3">
+<h3 class="anchored" data-anchor-id="la-lista-de-instruccionesscript">La Lista de Instrucciones/Script</h3>
+<p>Es posible que hayas escuchado esto antes, pero <a href="http://www.sciencemag.org/content/334/6060/1226">la reproducibilidad es un gran tema en la ciencia computacional</a>. Esto significa que cuando envíes tu artículo, los revisores y el resto del mundo deberían poder replicar exactamente los análisis desde los datos crudos hasta los resultados finales. Si estás tratando de ser eficiente, es probable que realices algunas etapas de resumen/análisis de datos antes de que los datos se consideren ordenados.</p>
+<p>Lo ideal que debes hacer al realizar el resumen es crear un script de computadora (en <code>R</code>, <code>Python</code>, u otro lenguaje) que tome los datos crudos como entrada y produzca los datos ordenados que estás compartiendo como salida. Puedes intentar ejecutar tu script algunas veces y ver si produce la misma salida.</p>
+<p>En muchos casos, la persona que recopiló los datos tiene incentivos para que sean ordenados para un estadístico y acelerar el proceso de colaboración. Es posible que no sepa cómo programar en un lenguaje de script. En ese caso, lo que debes proporcionar al estadístico es algo llamado <a href="http://en.wikipedia.org/wiki/Pseudocode">pseudocódigo</a>. Debería verse algo como:</p>
+<ol type="1">
+<li><strong>Paso 1</strong> - tomar el archivo crudo, ejecutar la versión 3.1.2 del software de resumen con parámetros a=1, b=2, c=3</li>
+<li><strong>Paso 2</strong> - ejecutar el software por separado para cada muestra</li>
+<li><strong>Paso 3</strong> - tomar la tercera columna del archivo de salida para cada muestra y esa es la fila correspondiente en el conjunto de datos de salida</li>
+</ol>
+<p>También debes incluir información sobre qué sistema (Mac/Windows/Linux) utilizaste para el software y si lo intentaste más de una vez para confirmar que daba los mismos resultados. Idealmente, deberías hacer que otro estudiante o compañero de laboratorio confirme que puede obtener el mismo archivo de salida que tú.</p>
+<p><strong>Ejemplo Práctico</strong></p>
+<p>Este código se ejecutó en Python 3.8.5 y utiliza las bibliotecas <code>pandas</code> y <code>IPython.display</code>. Las dependencias y la versión de Python están indicadas en los comentarios para mayor claridad.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Importar las bibliotecas necesarias</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Versión de Python utilizada: 3.8.5</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un DataFrame con los datos originales</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Paciente'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Presion_Sistolica'</span>: [<span class="dv">120</span>, <span class="dv">130</span>, <span class="dv">115</span>],</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Presion_Diastolica'</span>: [<span class="dv">80</span>, <span class="dv">85</span>, <span class="dv">75</span>],</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Glucosa'</span>: [<span class="dv">95</span>, <span class="dv">105</span>, <span class="dv">90</span>],</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Colesterol'</span>: [<span class="dv">180</span>, <span class="dv">190</span>, <span class="dv">170</span>]</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df_original <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un nuevo DataFrame en el formato deseado (unstack)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>df_unstacked <span class="op">=</span> df_original.set_index(<span class="st">'Paciente'</span>).stack().reset_index()</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>df_unstacked.columns <span class="op">=</span> [<span class="st">'Paciente'</span>, <span class="st">'Variable'</span>, <span class="st">'Valor'</span>]</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular diferentes estadísticas</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>estadisticas <span class="op">=</span> df_unstacked.groupby(<span class="st">'Variable'</span>)[<span class="st">'Valor'</span>].describe()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar el DataFrame en el formato antiguo   </span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mostrar el DataFrame en el formato antiguo:"</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>display(df_original)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar el DataFrame en el formato nuevo   </span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Mostrar el DataFrame en el formato nuevo:"</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>display(df_unstacked)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar las estadísticas básicas</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Mostrar las estadísticas básicas:"</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>display(estadisticas)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="lo-que-debes-esperar-del-analista" class="level3">
+<h3 class="anchored" data-anchor-id="lo-que-debes-esperar-del-analista">Lo que Debes Esperar del Analista</h3>
+<p>Cuando entregas un conjunto de datos debidamente ordenados, disminuye drásticamente la carga de trabajo del estadístico. Entonces, con suerte, te responderán mucho más rápido. Pero la mayoría de los estadísticos cuidadosos verificarán tu procedimiento, harán preguntas sobre las etapas que realizaste y tratarán de confirmar que pueden obtener los mismos datos ordenados que tú, al menos con verificaciones puntuales.</p>
+<p>Deberías esperar del estadístico:</p>
+<ol type="1">
+<li>Un script de análisis que realice cada uno de los análisis (no solo instrucciones).</li>
+<li>El código de computadora exacto que utilizaron para ejecutar el análisis.</li>
+<li>Todos los archivos de salida/figuras que generaron.</li>
+</ol>
+<p>Esta es la información que utilizarás para establecer la reproducibilidad y la precisión de tus resultados. Cada uno de los pasos en el análisis debe estar claramente explicado y debes hacer preguntas cuando no entiendas lo que hizo el analista. Es responsabilidad tanto del estadístico como del científico comprender el análisis estadístico.</p>
+<p>Es posible que no puedas realizar los análisis exactos sin el código del estadístico, pero deberías poder explicar por qué el estadístico realizó cada paso a un compañero de laboratorio o a tu investigador principal.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/beamilz\.com\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Website made with <a href="https://quarto.org/">Quarto</a>, by Francisco Alfaro. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://fralfaro.github.io/portfolio/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
