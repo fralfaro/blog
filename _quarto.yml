@@ -36,8 +36,8 @@ format:
   html:
     smooth-scroll: true
     theme:
-      light: [flatly, stylesheets/custom2.scss]
-      dark: [flatly, stylesheets/custom2.scss, stylesheets/theme-dark.scss]
+      light: [flatly, custom2.scss]
+      dark: [flatly, custom2.scss, theme-dark.scss]
     link-external-newwindow: true
     citations-hover: true
     footnotes-hover: true
