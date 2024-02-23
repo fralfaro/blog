@@ -36,14 +36,13 @@ format:
   html:
     smooth-scroll: true
     theme:
-      light: flatly
-      dark: [flatly, theme-dark.scss]
+      light: [flatly, stylesheets/custom2.scss]
+      dark: [flatly, stylesheets/custom2.scss, stylesheets/theme-dark.scss]
     link-external-newwindow: true
     citations-hover: true
     footnotes-hover: true
     toc: true
     code-link: true
-    css: custom2.scss
 
 editor: visual
 
