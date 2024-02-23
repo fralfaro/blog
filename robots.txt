@@ -1,1 +1,1 @@
-Sitemap: https://beamilz.com/sitemap.xml
+Sitemap: fralfaro.github.io/blog/sitemap.xml

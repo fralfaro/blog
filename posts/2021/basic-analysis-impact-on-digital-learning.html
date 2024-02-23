@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,11 +18,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -47,47 +48,17 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -112,7 +83,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
@@ -121,42 +98,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "resultado adicional en este documento",
     "search-more-matches-text": "resultados adicionales en este documento",
     "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar"
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        if (typeof require !== 'undefined') {
-        require.undef("plotly");
-        requirejs.config({
-            paths: {
-                'plotly': ['https://cdn.plot.ly/plotly-2.2.0.min']
-            }
-        });
-        require(['plotly'], function(Plotly) {
-            window._Plotly = Plotly;
-        });
-        }
-        </script>
-        
 
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+if (typeof require !== 'undefined') {
+require.undef("plotly");
+requirejs.config({
+    paths: {
+        'plotly': ['https://cdn.plot.ly/plotly-2.2.0.min']
+    }
+});
+require(['plotly'], function(Plotly) {
+    window._Plotly = Plotly;
+});
+}
+</script>
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../images/doberman.png" alt="" class="navbar-logo">
     </a>
@@ -164,36 +171,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <span class="navbar-title">Personal Blog</span>
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/fralfaro"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/fralfaro"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/faam/"><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://fralfaro.github.io/portfolio/"><i class="bi bi-globe" role="img">
+    <a class="nav-link" href="https://fralfaro.github.io/portfolio/"> <i class="bi bi-globe" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -268,6 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+
 <section id="impact-on-digital-learning" class="level1">
 <h1>Impact on Digital Learning</h1>
 <p><a href="https://kaggle.com/kernels/welcome?src=https://github.com/fralfaro/portfolio/blob/main/docs/blog/posts/2021/basic-analysis-impact-on-digital-learning.ipynb"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" class="img-fluid" alt="Kaggle"></a> <a href="https://www.kaggle.com/code/faamds/basic-analysis-impact-on-digital-learning"><img src="https://img.shields.io/static/v1?label=Kaggle&amp;message=link&amp;color=57aeac&amp;labelColor=black&amp;style=flat&amp;logo=kaggle.png" class="img-fluid"></a></p>
@@ -291,7 +299,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><strong>Top 5 rows</strong>: Show first 5 rows + explanation for some columns.</li>
 <li><strong>Summary</strong>: Summary of datasets.</li>
 </ul>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T21:59:13.410181Z”,“iopub.status.busy”:“2021-08-24T21:59:13.316042Z”,“iopub.status.idle”:“2021-08-24T21:59:41.807446Z”,“shell.execute_reply”:“2021-08-24T21:59:41.806324Z”,“shell.execute_reply.started”:“2021-08-24T21:48:09.998997Z”}’ papermill=‘{“duration”:28.514116,“end_time”:“2021-08-24T21:59:41.807642”,“exception”:false,“start_time”:“2021-08-24T21:59:13.293526”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=1}</p>
+<p>::: {#d55eb0e5 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T21:59:13.410181Z”,“iopub.status.busy”:“2021-08-24T21:59:13.316042Z”,“iopub.status.idle”:“2021-08-24T21:59:41.807446Z”,“shell.execute_reply”:“2021-08-24T21:59:41.806324Z”,“shell.execute_reply.started”:“2021-08-24T21:48:09.998997Z”}’ papermill=‘{“duration”:28.514116,“end_time”:“2021-08-24T21:59:41.807642”,“exception”:false,“start_time”:“2021-08-24T21:59:13.293526”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=1}</p>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
@@ -429,7 +437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Note</strong>: Preprocessing varies if you see other notebooks of this challenge. The processing will depend on the understanding of each of the datasets and the extra information that you may have.</p>
 </blockquote>
 <p><img src="https://gitlab.com/FAAM/learnplatform/-/raw/master/images/4.png"></p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T21:59:42.315509Z”,“iopub.status.busy”:“2021-08-24T21:59:42.314913Z”,“iopub.status.idle”:“2021-08-24T22:00:00.669027Z”,“shell.execute_reply”:“2021-08-24T22:00:00.669504Z”,“shell.execute_reply.started”:“2021-08-24T21:48:44.902736Z”}’ papermill=‘{“duration”:18.384236,“end_time”:“2021-08-24T22:00:00.669700”,“exception”:false,“start_time”:“2021-08-24T21:59:42.285464”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=2}</p>
+<p>::: {#0578f18e .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T21:59:42.315509Z”,“iopub.status.busy”:“2021-08-24T21:59:42.314913Z”,“iopub.status.idle”:“2021-08-24T22:00:00.669027Z”,“shell.execute_reply”:“2021-08-24T22:00:00.669504Z”,“shell.execute_reply.started”:“2021-08-24T21:48:44.902736Z”}’ papermill=‘{“duration”:18.384236,“end_time”:“2021-08-24T22:00:00.669700”,“exception”:false,“start_time”:“2021-08-24T21:59:42.285464”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=2}</p>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># products_df</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>products_df[<span class="st">'primary_function_main'</span>] <span class="op">=</span> products_df[<span class="st">'primary_essential_function'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.split(<span class="st">' - '</span>)[<span class="dv">0</span>] <span class="cf">if</span> x <span class="op">==</span> x <span class="cf">else</span> x)</span>
@@ -477,7 +485,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="visualization-districts" class="level3">
 <h3 class="anchored" data-anchor-id="visualization-districts">Visualization: Districts</h3>
 <p>First of all, I am interested how diverse the available school districts are. As you can see in below plot, the available data does not cover all the states in the U.S. . The states with the most available school districts are CT (30) and UT (29) while there are also states with only one school district (FL, TN, NY, AZ).</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:00.788039Z”,“iopub.status.busy”:“2021-08-24T22:00:00.787339Z”,“iopub.status.idle”:“2021-08-24T22:00:00.944794Z”,“shell.execute_reply”:“2021-08-24T22:00:00.944141Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.148181Z”}’ papermill=‘{“duration”:0.179153,“end_time”:“2021-08-24T22:00:00.944932”,“exception”:false,“start_time”:“2021-08-24T22:00:00.765779”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=3}</p>
+<p>::: {#74a2ee97 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:00.788039Z”,“iopub.status.busy”:“2021-08-24T22:00:00.787339Z”,“iopub.status.idle”:“2021-08-24T22:00:00.944794Z”,“shell.execute_reply”:“2021-08-24T22:00:00.944141Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.148181Z”}’ papermill=‘{“duration”:0.179153,“end_time”:“2021-08-24T22:00:00.944932”,“exception”:false,“start_time”:“2021-08-24T22:00:00.765779”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=3}</p>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># map plot: districts</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>us_state_abbrev <span class="op">=</span> {</span>
@@ -574,7 +582,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>fig.update_layout(layout)   </span>
 <span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
 <div>                            <div id="f5b4fd90-c85f-4a32-82ac-973d90f01203" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f5b4fd90-c85f-4a32-82ac-973d90f01203")) {                    Plotly.newPlot(                        "f5b4fd90-c85f-4a32-82ac-973d90f01203",                        [{"colorscale":[[0.0,"rgb(255,255,255)"],[0.125,"rgb(240,240,240)"],[0.25,"rgb(217,217,217)"],[0.375,"rgb(189,189,189)"],[0.5,"rgb(150,150,150)"],[0.625,"rgb(115,115,115)"],[0.75,"rgb(82,82,82)"],[0.875,"rgb(37,37,37)"],[1.0,"rgb(0,0,0)"]],"geo":"geo","locationmode":"USA-states","locations":["AL","AK","AS","AZ","AR","CA","CO","CT","DE","DC","FL","GA","GU","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","MP","OH","OK","OR","PA","PR","RI","SC","SD","TN","TX","UT","VT","VI","VA","WA","WV","WI","WY"],"marker":{"line":{"color":"black"}},"type":"choropleth","z":[0,0,0,1,0,12,0,30,0,3,1,0,0,0,0,18,7,0,0,0,0,0,0,21,2,1,0,6,0,0,0,2,2,0,8,4,1,0,11,0,0,0,0,0,0,0,2,2,29,0,0,4,6,0,3,0],"zmax":1}],                        {"geo":{"scope":"usa"},"template":{"data":{"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"font":{"color":"black"},"text":"Number of Available School Districts per State"}},                        {"responsive": true}                    ).then(function(){
                             
 var gd = document.getElementById('f5b4fd90-c85f-4a32-82ac-973d90f01203');
@@ -602,7 +609,7 @@ if (outputEl) {{
                         })                };                });            </script>        </div>
 </div>
 <p>:::</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:01.006598Z”,“iopub.status.busy”:“2021-08-24T22:00:01.005538Z”,“iopub.status.idle”:“2021-08-24T22:00:01.460650Z”,“shell.execute_reply”:“2021-08-24T22:00:01.461172Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.338218Z”}’ papermill=‘{“duration”:0.494452,“end_time”:“2021-08-24T22:00:01.461333”,“exception”:false,“start_time”:“2021-08-24T22:00:00.966881”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=4}</p>
+<p>::: {#7eac1448 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:01.006598Z”,“iopub.status.busy”:“2021-08-24T22:00:01.005538Z”,“iopub.status.idle”:“2021-08-24T22:00:01.460650Z”,“shell.execute_reply”:“2021-08-24T22:00:01.461172Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.338218Z”}’ papermill=‘{“duration”:0.494452,“end_time”:“2021-08-24T22:00:01.461333”,“exception”:false,“start_time”:“2021-08-24T22:00:00.966881”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=4}</p>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># bar plot: districts</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'default'</span>)</span>
@@ -632,7 +639,11 @@ if (outputEl) {{
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 </section>
@@ -641,7 +652,7 @@ if (outputEl) {{
 <p>Locales are separated into 4 categories: <strong>Suburb</strong>,<strong>Rural</strong>, <strong>City</strong> and <strong>Town</strong>, where most of the locales are concentrated in the <em>Suburb</em> category (104).</p>
 <p>For the <code>pct_black/hispanic</code> variable, <em>Rural</em> and <em>Town</em> categories concentrate their entire population close to the interval $ [0,0.2 [$, while for the others sectors this percentage is varied.</p>
 <p>For <code>pctfree/reduced</code> and <code>pp_total_raw</code> indicators, the distribution for each location is different, although they tend to focus on a particular interval.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:01.557765Z”,“iopub.status.busy”:“2021-08-24T22:00:01.556848Z”,“iopub.status.idle”:“2021-08-24T22:00:03.160447Z”,“shell.execute_reply”:“2021-08-24T22:00:03.160919Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.865498Z”}’ papermill=‘{“duration”:1.630377,“end_time”:“2021-08-24T22:00:03.161103”,“exception”:false,“start_time”:“2021-08-24T22:00:01.530726”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=5}</p>
+<p>::: {#a15318df .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:01.557765Z”,“iopub.status.busy”:“2021-08-24T22:00:01.556848Z”,“iopub.status.idle”:“2021-08-24T22:00:03.160447Z”,“shell.execute_reply”:“2021-08-24T22:00:03.160919Z”,“shell.execute_reply.started”:“2021-08-24T21:49:15.865498Z”}’ papermill=‘{“duration”:1.630377,“end_time”:“2021-08-24T22:00:03.161103”,“exception”:false,“start_time”:“2021-08-24T22:00:01.530726”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=5}</p>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># heatmap: districts -&gt; locale</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> districts_df.groupby(<span class="st">'locale'</span>).pp_total_raw.value_counts().to_frame()</span>
@@ -697,14 +708,18 @@ if (outputEl) {{
 <span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 </section>
 <section id="visualization-sectors" class="level3">
 <h3 class="anchored" data-anchor-id="visualization-sectors">Visualization: Sectors</h3>
 <p>Sectors are separated into 3 categories: <strong>sector_Corporate</strong>, <strong>sector_HigherEd</strong> and <strong>sector_PreK-12</strong>, donde la categoría mayoritaria corresponde a <em>sector_PreK-12</em> (350). On the other hand, analyzing the <code>primary_function_main</code> variable, all sectors are focused on the<code>LC</code> category. It is worth mentioning that the distribution of the other categories remains almost the same between sectors.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:03.301514Z”,“iopub.status.busy”:“2021-08-24T22:00:03.292826Z”,“iopub.status.idle”:“2021-08-24T22:00:03.796850Z”,“shell.execute_reply”:“2021-08-24T22:00:03.797314Z”,“shell.execute_reply.started”:“2021-08-24T21:49:17.574316Z”}’ papermill=‘{“duration”:0.551066,“end_time”:“2021-08-24T22:00:03.797481”,“exception”:false,“start_time”:“2021-08-24T22:00:03.246415”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=6}</p>
+<p>::: {#84e6e3f2 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:03.301514Z”,“iopub.status.busy”:“2021-08-24T22:00:03.292826Z”,“iopub.status.idle”:“2021-08-24T22:00:03.796850Z”,“shell.execute_reply”:“2021-08-24T22:00:03.797314Z”,“shell.execute_reply.started”:“2021-08-24T21:49:17.574316Z”}’ papermill=‘{“duration”:0.551066,“end_time”:“2021-08-24T22:00:03.797481”,“exception”:false,“start_time”:“2021-08-24T22:00:03.246415”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=6}</p>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'default'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">'sector_Corporate'</span>, <span class="st">'sector_HigherEd'</span>,<span class="st">'sector_PreK-12'</span>]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> [products_df[x].<span class="bu">sum</span>() <span class="cf">for</span> x <span class="kw">in</span> names]</span>
@@ -732,14 +747,18 @@ if (outputEl) {{
 <span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 </section>
 <section id="visualization-primary_function_main" class="level3">
 <h3 class="anchored" data-anchor-id="visualization-primary_function_main">Visualization: primary_function_main</h3>
 <p>Continuing the analysis of the <code>primary_function_main</code> variable, it was observed that most of these are in the<code>LC</code> category (77%). Within this category, its subcategory is analyzed, where the predominant subcategory is <code>Sites, Resources &amp; Reference</code> (101).</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:03.924145Z”,“iopub.status.busy”:“2021-08-24T22:00:03.923467Z”,“iopub.status.idle”:“2021-08-24T22:00:04.076527Z”,“shell.execute_reply”:“2021-08-24T22:00:04.077022Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.054662Z”}’ papermill=‘{“duration”:0.190305,“end_time”:“2021-08-24T22:00:04.077195”,“exception”:false,“start_time”:“2021-08-24T22:00:03.886890”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=7}</p>
+<p>::: {#c0c96d39 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:03.924145Z”,“iopub.status.busy”:“2021-08-24T22:00:03.923467Z”,“iopub.status.idle”:“2021-08-24T22:00:04.076527Z”,“shell.execute_reply”:“2021-08-24T22:00:04.077022Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.054662Z”}’ papermill=‘{“duration”:0.190305,“end_time”:“2021-08-24T22:00:04.077195”,“exception”:false,“start_time”:“2021-08-24T22:00:03.886890”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=7}</p>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pieplot: products</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>color <span class="op">=</span> [</span>
@@ -760,10 +779,14 @@ if (outputEl) {{
 <span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>plt.text(x <span class="op">=</span> <span class="op">-</span><span class="fl">1.4</span>, y <span class="op">=</span> <span class="fl">1.1</span>, s <span class="op">=</span> <span class="st">"Categories"</span>,fontsize <span class="op">=</span> <span class="dv">18</span>, weight <span class="op">=</span> <span class="st">'bold'</span>, alpha <span class="op">=</span> <span class="fl">.90</span>)<span class="op">;</span></span>
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:04.155626Z”,“iopub.status.busy”:“2021-08-24T22:00:04.153843Z”,“iopub.status.idle”:“2021-08-24T22:00:04.430687Z”,“shell.execute_reply”:“2021-08-24T22:00:04.431156Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.238340Z”}’ papermill=‘{“duration”:0.322608,“end_time”:“2021-08-24T22:00:04.431319”,“exception”:false,“start_time”:“2021-08-24T22:00:04.108711”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=8}</p>
+<p>::: {#c52db360 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:04.155626Z”,“iopub.status.busy”:“2021-08-24T22:00:04.153843Z”,“iopub.status.idle”:“2021-08-24T22:00:04.430687Z”,“shell.execute_reply”:“2021-08-24T22:00:04.431156Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.238340Z”}’ papermill=‘{“duration”:0.322608,“end_time”:“2021-08-24T22:00:04.431319”,“exception”:false,“start_time”:“2021-08-24T22:00:04.108711”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=8}</p>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pieplot: products -&gt; subcategories</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'default'</span>)</span>
@@ -792,7 +815,11 @@ if (outputEl) {{
 <span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 </section>
@@ -808,7 +835,7 @@ if (outputEl) {{
 <li>1 provider have 30 occurrences.</li>
 </ul>
 <p>Based on this, only the top 15 providers will be displayed.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:04.610677Z”,“iopub.status.busy”:“2021-08-24T22:00:04.586018Z”,“iopub.status.idle”:“2021-08-24T22:00:04.945261Z”,“shell.execute_reply”:“2021-08-24T22:00:04.945715Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.515334Z”}’ papermill=‘{“duration”:0.414758,“end_time”:“2021-08-24T22:00:04.945874”,“exception”:false,“start_time”:“2021-08-24T22:00:04.531116”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=9}</p>
+<p>::: {#8cf15baa .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:04.610677Z”,“iopub.status.busy”:“2021-08-24T22:00:04.586018Z”,“iopub.status.idle”:“2021-08-24T22:00:04.945261Z”,“shell.execute_reply”:“2021-08-24T22:00:04.945715Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.515334Z”}’ papermill=‘{“duration”:0.414758,“end_time”:“2021-08-24T22:00:04.945874”,“exception”:false,“start_time”:“2021-08-24T22:00:04.531116”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=9}</p>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dct <span class="op">=</span> {</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Savvas Learning Company | Formerly Pearson K12 Learning'</span>: <span class="st">'Savvas Learning Company'</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span>
@@ -847,12 +874,16 @@ if (outputEl) {{
 <span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>plt.xticks(fontsize<span class="op">=</span><span class="dv">16</span>)</span>
 <span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 <p>With regard to products, there are about 372 different products.</p>
 <p>We can make a word cloud to be able to analyze in a different way, words by themselves that are repeated the most in the <code>product_name</code> variable.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:05.106485Z”,“iopub.status.busy”:“2021-08-24T22:00:05.104433Z”,“iopub.status.idle”:“2021-08-24T22:00:06.068287Z”,“shell.execute_reply”:“2021-08-24T22:00:06.068956Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.935625Z”}’ papermill=‘{“duration”:1.012728,“end_time”:“2021-08-24T22:00:06.069135”,“exception”:false,“start_time”:“2021-08-24T22:00:05.056407”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=10}</p>
+<p>::: {#53d5558a .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:05.106485Z”,“iopub.status.busy”:“2021-08-24T22:00:05.104433Z”,“iopub.status.idle”:“2021-08-24T22:00:06.068287Z”,“shell.execute_reply”:“2021-08-24T22:00:06.068956Z”,“shell.execute_reply.started”:“2021-08-24T21:49:18.935625Z”}’ papermill=‘{“duration”:1.012728,“end_time”:“2021-08-24T22:00:06.069135”,“exception”:false,“start_time”:“2021-08-24T22:00:05.056407”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=10}</p>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>cloud <span class="op">=</span> WordCloud(</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    width<span class="op">=</span><span class="dv">1080</span>,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    height<span class="op">=</span><span class="dv">270</span>,</span>
@@ -864,12 +895,16 @@ if (outputEl) {{
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.imshow(cloud)</span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'off'</span>)<span class="op">;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 <p>To understand more in detail the use of these products, we will analyze the use of these products with respect to the variable <code>engagement_index</code>. The first graph is related to the average <code>engagement_index</code> (per student) for the year 2020, where the first 15 products will be displayed.</p>
 <p>An important fact is that 362 products have an average of less than 1!.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:06.276148Z”,“iopub.status.busy”:“2021-08-24T22:00:06.275229Z”,“iopub.status.idle”:“2021-08-24T22:00:07.642119Z”,“shell.execute_reply”:“2021-08-24T22:00:07.642568Z”,“shell.execute_reply.started”:“2021-08-24T21:49:19.888566Z”}’ papermill=‘{“duration”:1.424686,“end_time”:“2021-08-24T22:00:07.642750”,“exception”:false,“start_time”:“2021-08-24T22:00:06.218064”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=11}</p>
+<p>::: {#4c2d24bf .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:06.276148Z”,“iopub.status.busy”:“2021-08-24T22:00:06.275229Z”,“iopub.status.idle”:“2021-08-24T22:00:07.642119Z”,“shell.execute_reply”:“2021-08-24T22:00:07.642568Z”,“shell.execute_reply.started”:“2021-08-24T21:49:19.888566Z”}’ papermill=‘{“duration”:1.424686,“end_time”:“2021-08-24T22:00:07.642750”,“exception”:false,“start_time”:“2021-08-24T22:00:06.218064”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=11}</p>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>group_01 <span class="op">=</span> (engagement_df_mix.groupby(<span class="st">'product_name'</span>)[<span class="st">'engagement_index'</span>].mean()<span class="op">/</span><span class="dv">1000</span>).reset_index().sort_values(<span class="st">'engagement_index'</span>,ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>group_01[<span class="st">'engagement_index'</span>] <span class="op">=</span> group_01[<span class="st">'engagement_index'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="bu">round</span>(x,<span class="dv">2</span>))</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>less_1 <span class="op">=</span> <span class="bu">len</span>(group_01.loc[<span class="kw">lambda</span> x:x[<span class="st">'engagement_index'</span>]<span class="op">&lt;</span><span class="dv">1</span>])</span>
@@ -901,14 +936,18 @@ if (outputEl) {{
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>plt.xticks(fontsize<span class="op">=</span><span class="dv">16</span>)</span>
 <span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 <p>Let’s study the temporal behavior (at the level of weeks) of these tools during the year 2020, where the most three used tools will be shown with different colors, while the other tools will be visualized but with the same color (in order to understand their distribution).</p>
 <blockquote class="blockquote">
 <p><strong>Note</strong>: The proposed analysis can be carried out at the day level and analyzing through time series each of the tools during the year 2020.</p>
 </blockquote>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:08.316803Z”,“iopub.status.busy”:“2021-08-24T22:00:08.316106Z”,“iopub.status.idle”:“2021-08-24T22:00:13.858922Z”,“shell.execute_reply”:“2021-08-24T22:00:13.859377Z”,“shell.execute_reply.started”:“2021-08-24T21:49:21.992666Z”}’ papermill=‘{“duration”:6.060783,“end_time”:“2021-08-24T22:00:13.859531”,“exception”:false,“start_time”:“2021-08-24T22:00:07.798748”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=12}</p>
+<p>::: {#9d39e70f .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:08.316803Z”,“iopub.status.busy”:“2021-08-24T22:00:08.316106Z”,“iopub.status.idle”:“2021-08-24T22:00:13.858922Z”,“shell.execute_reply”:“2021-08-24T22:00:13.859377Z”,“shell.execute_reply.started”:“2021-08-24T21:49:21.992666Z”}’ papermill=‘{“duration”:6.060783,“end_time”:“2021-08-24T22:00:13.859531”,“exception”:false,“start_time”:“2021-08-24T22:00:07.798748”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=12}</p>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>col <span class="op">=</span> <span class="st">'week'</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>group_04  <span class="op">=</span> (engagement_df_mix.groupby([<span class="st">'product_name'</span>,col])[<span class="st">'engagement_index'</span>].mean()<span class="op">/</span><span class="dv">1000</span>).reset_index().sort_values(<span class="st">'engagement_index'</span>,ascending <span class="op">=</span> <span class="va">False</span>)</span>
@@ -976,11 +1015,15 @@ if (outputEl) {{
 <span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>plt.axvline(x <span class="op">=</span> <span class="dv">36</span>, color <span class="op">=</span> <span class="st">'black'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,linewidth <span class="op">=</span> <span class="fl">0.5</span>)</span>
 <span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 <p>Now, we can understand the <code>engagement index</code> for the most important tools about districts, where the districts of * Wisconsin <em>, </em> Missouri * and * Virginia * have the highest <code>engagement index</code> among the three most used tools.</p>
-<p>::: {.cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:14.637147Z”,“iopub.status.busy”:“2021-08-24T22:00:14.636457Z”,“iopub.status.idle”:“2021-08-24T22:00:17.454954Z”,“shell.execute_reply”:“2021-08-24T22:00:17.455400Z”,“shell.execute_reply.started”:“2021-08-24T21:49:29.563655Z”}’ papermill=‘{“duration”:3.421243,“end_time”:“2021-08-24T22:00:17.455572”,“exception”:false,“start_time”:“2021-08-24T22:00:14.034329”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=13}</p>
+<p>::: {#d1e1ba17 .cell _kg_hide-input=‘true’ execution=‘{“iopub.execute_input”:“2021-08-24T22:00:14.637147Z”,“iopub.status.busy”:“2021-08-24T22:00:14.636457Z”,“iopub.status.idle”:“2021-08-24T22:00:17.454954Z”,“shell.execute_reply”:“2021-08-24T22:00:17.455400Z”,“shell.execute_reply.started”:“2021-08-24T21:49:29.563655Z”}’ papermill=‘{“duration”:3.421243,“end_time”:“2021-08-24T22:00:17.455572”,“exception”:false,“start_time”:“2021-08-24T22:00:14.034329”,“status”:“completed”}’ tags=‘[“hide-input”]’ execution_count=13}</p>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>group_02 <span class="op">=</span> (engagement_df_mix.groupby([<span class="st">'state'</span>,<span class="st">'product_name'</span>])[<span class="st">'engagement_index'</span>].mean()<span class="op">/</span><span class="dv">1000</span>)<span class="op">\</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>            .reset_index().sort_values(<span class="st">'engagement_index'</span>,ascending <span class="op">=</span> <span class="va">False</span>).fillna(<span class="dv">0</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1007,7 +1050,11 @@ if (outputEl) {{
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.text(x <span class="op">=</span> <span class="op">-</span><span class="dv">50</span>, y <span class="op">=</span> <span class="op">-</span><span class="dv">3</span>, s <span class="op">=</span> <span class="st">"by state and products, per 1 student"</span>,fontsize <span class="op">=</span> <span class="dv">14</span>,  alpha <span class="op">=</span> <span class="fl">.90</span>)<span class="op">;</span></span>
 <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-14-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="basic-analysis-impact-on-digital-learning_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <p>:::</p>
 </section>
@@ -1079,6 +1126,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1145,13 +1219,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1178,9 +1254,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1216,10 +1306,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("fralfaro\.github\.io\/blog\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1229,8 +1336,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1245,6 +1361,238 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1282,26 +1630,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/beamilz\.com\//);
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Website made with <a href="https://quarto.org/">Quarto</a>, by Francisco Alfaro. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</div>   
+    <div class="nav-footer-left">
+<p>Website made with <a href="https://quarto.org/">Quarto</a>, by Francisco Alfaro. License: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1326,6 +1665,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 
