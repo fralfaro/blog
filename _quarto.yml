@@ -1,0 +1,49 @@
+project:
+  type: website
+
+website:
+  title: "Personal Blog"
+  site-url: "https://beamilz.com/"
+  favicon: 'images/logo_fam2.png'
+  image: 'images/doberman.png'
+  page-footer:
+    left: "Website made with [Quarto](https://quarto.org/), by Francisco Alfaro. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    right:
+      - icon: github
+        href: https://github.com/fralfaro
+      - icon: linkedin
+        href: https://www.linkedin.com/in/faam/
+      - icon: globe
+        href: https://fralfaro.github.io/portfolio/
+
+    
+  navbar:
+    logo: /images/doberman.png
+    right:
+      - href: about.qmd
+        text: About Me
+      - icon: github
+        href: https://github.com/fralfaro
+      - icon: linkedin
+        href: https://www.linkedin.com/in/faam/
+      - icon: globe
+        href: https://fralfaro.github.io/portfolio/
+
+lang: es
+
+format:
+  html:
+    smooth-scroll: true
+    theme:
+      light: [Flatly, stylesheets/custom2.scss]
+      dark: [Flatly, stylesheets/custom2.scss,stylesheets/theme-dark.scss]
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    toc: true
+    code-link: true
+
+editor: visual
+
+execute:
+  freeze: true

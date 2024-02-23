@@ -1,0 +1,52 @@
+---
+title: "Francisco Alfaro M."
+comments: false
+image: images/yo2.png
+about:
+  template: trestles
+  links:
+    - icon: globe
+      text: Portfolio
+      href: https://fralfaro.github.io/portfolio/
+    - icon: file-pdf
+      text: Resume
+      href: https://drive.google.com/file/d/1dgGfEKgSJwr9lObHGAOYQjSN9m0Grk_7/view
+    - icon: github
+      text: GitHub
+      href: https://github.com/fralfaro
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/faam/  
+---
+
+<center>
+
+::: {.btn-group role="group" aria-label="About"}
+<a href="about.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="about-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+:::
+
+</center>
+
+::: {#hero-heading}
+
+Hola👋 Mi nombre es Francisco!
+
+<p align="center">
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=20&duration=3000&pause=1000&color=22&center=true&vCenter=true&width=477&lines=Desarrollador,+Conferencista,+Docente;Colaborador+de+Código+Abierto" alt="Typing SVG" /></a>
+</p>
+
+* **Profesión**: 📊 Ingeniero Matemático
+* **Trabajo Actual**: 
+    * 💻 Jefe de Analítica Avanzada (Grupo Security)
+    * 📖 Profesor Asociado (UTFSM)
+
+### Intereses
+
+🎮 Videojuegos | 🏀 Baloncesto | 💡 Aprendizaje 
+
+✅ Desarrollo de Software  <br>
+✅ Modelado Estadístico, Series Temporales <br> 
+✅ Aprendizaje Automático/Profundo <br> 
+✅ Computación en la Nube, Big Data<br> 
+
+:::
