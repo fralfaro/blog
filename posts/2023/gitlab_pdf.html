@@ -200,6 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#generando-archivos-pdf-con-gitlab-cicd" id="toc-generando-archivos-pdf-con-gitlab-cicd" class="nav-link active" data-scroll-target="#generando-archivos-pdf-con-gitlab-cicd">Generando Archivos PDF con GitLab CI/CD</a>
   <ul class="collapse">
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
   <li><a href="#artefactos-en-gitlab-cicd" id="toc-artefactos-en-gitlab-cicd" class="nav-link" data-scroll-target="#artefactos-en-gitlab-cicd">Artefactos en GitLab CI/CD</a></li>
   <li><a href="#generación-de-archivos-pdf-con-gitlab-cicd" id="toc-generación-de-archivos-pdf-con-gitlab-cicd" class="nav-link" data-scroll-target="#generación-de-archivos-pdf-con-gitlab-cicd">Generación de Archivos PDF con GitLab CI/CD</a>
   <ul class="collapse">
@@ -210,6 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#paso-5-acceso-a-los-archivos-pdf-generados" id="toc-paso-5-acceso-a-los-archivos-pdf-generados" class="nav-link" data-scroll-target="#paso-5-acceso-a-los-archivos-pdf-generados">Paso 5: Acceso a los Archivos PDF Generados</a></li>
   </ul></li>
   <li><a href="#conclusiones" id="toc-conclusiones" class="nav-link" data-scroll-target="#conclusiones">Conclusiones</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -223,14 +225,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="generando-archivos-pdf-con-gitlab-cicd" class="level1">
 <h1>Generando Archivos PDF con GitLab CI/CD</h1>
-<p><img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png" alt="" align="center" width="150"></p>
+<p><img src="../images/gitlab-ci.png" alt="" align="center" width="150"></p>
 <p><br></p>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p><a href="https://docs.gitlab.com/ee/ci/">GitLab CI/CD</a> es una potente herramienta que permite automatizar y gestionar el ciclo de vida de las aplicaciones de software.</p>
 <p>CI (Integración Continua) y CD (Entrega Continua) son prácticas esenciales en el desarrollo de software moderno que buscan mejorar la calidad del código, aumentar la eficiencia y reducir los errores. GitLab CI/CD se integra de manera nativa en el flujo de trabajo de GitLab, lo que lo convierte en una opción atractiva para equipos de desarrollo.</p>
 <ul>
 <li><p><strong>CI (Integración Continua)</strong>: Es el proceso de integrar cambios de código frecuentes en un repositorio compartido. Esto implica la ejecución automática de pruebas y análisis de calidad cada vez que se envía código. El objetivo es identificar y corregir problemas de manera temprana en el ciclo de desarrollo.</p></li>
 <li><p><strong>CD (Entrega Continua)</strong>: Una vez que las pruebas de CI se han superado con éxito, el código se considera apto para su implementación en entornos de producción o de pruebas. El objetivo es entregar de manera eficiente y confiable el software a los usuarios finales.</p></li>
 </ul>
+</section>
 <section id="artefactos-en-gitlab-cicd" class="level2">
 <h2 class="anchored" data-anchor-id="artefactos-en-gitlab-cicd">Artefactos en GitLab CI/CD</h2>
 <p><img src="https://cdn4.iconfinder.com/data/icons/folders-23/140/_Code-512.png" alt="" align="center" width="150"></p>
@@ -250,13 +255,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="paso-1-preparación-del-proyecto">Paso 1: Preparación del Proyecto</h3>
 <p>Antes de comenzar, asegúrese de que su proyecto de GitLab esté configurado correctamente y tenga acceso a GitLab CI/CD. También debe tener un archivo de código fuente que desee convertir en un archivo PDF.</p>
 <p>Asegúrese de que cualquier dependencia necesaria esté especificada en su archivo de configuración de CI/CD.</p>
-<p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_01.png" alt="" align="center"></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_01.png" alt="" align="center" width="750"></p>
 </section>
 <section id="paso-2-creación-de-un-script-de-generación-de-pdf" class="level3">
 <h3 class="anchored" data-anchor-id="paso-2-creación-de-un-script-de-generación-de-pdf">Paso 2: Creación de un Script de Generación de PDF</h3>
 <p>Cree un script que sea capaz de generar el archivo PDF a partir de sus datos de entrada.</p>
 <p>Este script debería tomar los datos relevantes y formatearlos en un archivo PDF.</p>
-<p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_02.png" alt="" align="center"></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_02.png" alt="" align="center" width="750"></p>
 </section>
 <section id="paso-3-configuración-de-gitlab-cicd" class="level3">
 <h3 class="anchored" data-anchor-id="paso-3-configuración-de-gitlab-cicd">Paso 3: Configuración de GitLab CI/CD</h3>
@@ -307,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="paso-4-ejecución-del-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="paso-4-ejecución-del-pipeline">Paso 4: Ejecución del pipeline</h3>
 <p>Cada vez que realice un envío de código (push) o active manualmente el pipeline, GitLab ejecutará el trabajo de generación de PDF. El script generará el archivo PDF y lo almacenará como un artefacto.</p>
-<p><img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_03.png" alt="" align="center"></p>
+<p><img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_03.png" alt="" align="center" width="750"></p>
 </section>
 <section id="paso-5-acceso-a-los-archivos-pdf-generados" class="level3">
 <h3 class="anchored" data-anchor-id="paso-5-acceso-a-los-archivos-pdf-generados">Paso 5: Acceso a los Archivos PDF Generados</h3>
@@ -320,6 +325,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="conclusiones">Conclusiones</h2>
 <p>GitLab CI/CD es una herramienta poderosa que puede ayudar en la automatización de una amplia variedad de tareas, incluida la generación de archivos PDF.</p>
 <p>Al comprender cómo utilizar artefactos en GitLab CI/CD y seguir los pasos mencionados anteriormente, puede integrar fácilmente la generación de PDF en su flujo de trabajo de desarrollo, lo que ahorra tiempo y esfuerzo, y garantiza la consistencia y la calidad en la creación de documentos PDF automatizados.</p>
+</section>
+<section id="referencias" class="level2">
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/ci/">Get started with GitLab CI/CD</a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html">Job artifacts</a></li>
+</ul>
 
 
 </section>
