@@ -11,9 +11,11 @@ image: "../images/books.png"
 
 # El arte de una buena documentación
 
-<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/books.png" width="150" align="center" />
+<img src="../images/books.png" width="150" align="center" />
 
 <br>
+
+## Introducción
 
 Esperamos que, si estás leyendo este tutorial, ya comprendas la importancia de documentar tu código. Pero, por si acaso, permíteme citar algo que Guido mencionó en la reciente [PyCon 2016](https://www.youtube.com/watch?v=YgtL4S7Hrwo&ab_channel=PyCon2016):
 
@@ -566,3 +568,8 @@ Si te sientes perdido acerca de por dónde continuar con tu documentación, obse
 Al final, no te desanimes ni te sientas abrumado por la cantidad de trabajo necesario para documentar el código. 
 
 Una vez que comiences a documentar tu código, te resultará más fácil seguir adelante. 
+
+## Referencias
+
+* [Documenting Python Code: A Complete Guide](https://realpython.com/documenting-python-code/)
+* [Document Your Python Code and Projects With ChatGPT](https://realpython.com/document-python-code-with-chatgpt/)

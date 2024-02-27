@@ -10,9 +10,11 @@ image: "../images/gitlab-ci.png"
 
 # Generando Archivos PDF con GitLab CI/CD
 
-<img src="https://future-architect.github.io/images/20230306a/gitlab-ci-cd-logo_2x.png" alt="" align="center" width="150"/>
+<img src="../images/gitlab-ci.png" alt="" align="center" width="150"/>
 
 <br>
+
+## Introducción 
 
 [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) es una potente herramienta que permite automatizar y gestionar el ciclo de vida de las aplicaciones de software. 
 
@@ -73,7 +75,7 @@ archivo de código fuente que desee convertir en un archivo PDF.
 Asegúrese de que cualquier dependencia necesaria esté especificada
 en su archivo de configuración de CI/CD.
 
-<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_01.png" alt="" align="center" />
+<img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_01.png" alt="" align="center" width="750"/>
 
 
 ### Paso 2: Creación de un Script de Generación de PDF
@@ -84,7 +86,7 @@ partir de sus datos de entrada.
 Este script debería tomar los datos relevantes y 
 formatearlos en un archivo PDF.
 
-<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_02.png" alt="" align="center" />
+<img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_02.png" alt="" align="center" width="750"/>
 
 
 ### Paso 3: Configuración de GitLab CI/CD
@@ -152,7 +154,7 @@ Cada vez que realice un envío de código (push) o active manualmente el pipelin
 GitLab ejecutará el trabajo de generación de PDF. 
 El script generará el archivo PDF y lo almacenará como un artefacto.
 
-<img src="https://raw.githubusercontent.com/fralfaro/DS-Blog/main/docs/blog/posts/2023/img/step_03.png" alt="" align="center"/>
+<img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/2023/img/step_03.png" alt="" align="center" width="750"/>
 
 
 
@@ -179,3 +181,8 @@ puede integrar fácilmente la generación de PDF en su flujo
 de trabajo de desarrollo, lo que ahorra tiempo y esfuerzo, 
 y garantiza la consistencia y la calidad en la creación de
 documentos PDF automatizados.
+
+## Referencias
+
+* [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
+* [Job artifacts](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html)
