@@ -16,6 +16,8 @@ website:
         href: https://www.linkedin.com/in/faam/
       - icon: globe
         href: https://fralfaro.github.io/portfolio/
+      - icon: pencil
+        href: https://fralfaro.github.io/blog/
 
     
   navbar:
@@ -29,6 +31,8 @@ website:
         href: https://www.linkedin.com/in/faam/
       - icon: globe
         href: https://fralfaro.github.io/portfolio/
+      - icon: pencil
+        href: https://fralfaro.github.io/blog/
 
 lang: es
 
