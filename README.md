@@ -11,15 +11,6 @@ A collection of articles covering topics about programming and education (in spa
 
 ## 2023
 
-#### Compartir datos
-
-🐍 Python  📅 Oct 26, 2023 🕒  10 min read
-
-[<img src="posts/images/share.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2023/data_sharing)
-Cómo Compartir Datos de Manera Efectiva (desde el punto de vista estadístico) y no morir en el intento. <br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2023/data_sharing)
-<br><br>
-
 #### Documentación
 
 🐍 Python  📅 Oct 07, 2023 🕒  10 min read
@@ -39,24 +30,6 @@ Cómo aprovechar GitLab CI/CD para generar archivos PDF utilizando los artefacto
 <br><br><br>
 
 ## 2022
-
-#### Causal Impact
-
-🐍 Python  📅 Oct 15, 2022 🕒  10 min read
-
-[<img src="posts/images/plots.svg"  width="90" height="90" align="left">](https://fralfaro.github.io/blog/posts/2022/2022-10-12-causal_impact)
-*CausalImpact* creado por Google estima el impacto de una intervención en una serie temporal.<br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2022/2022-10-12-causal_impact) 
-<br><br><br>
-
-#### Collaborative Filtering
-
-🐍 Python  📅 Oct 12, 2022 🕒  10 min read
-
-[<img src="posts/images/recommendation.png"  width="90" height="90" align="left">](https://fralfaro.github.io/blog/posts/2022/2022-10-12-implicit)
-*User-based collaborative filtering* para realizar un mejor sistema de recomendación de películas. <br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2022/2022-10-12-implicit)
-<br><br><br>
 
 #### Test Driven Development
 
@@ -90,14 +63,6 @@ Competition Solution:  LearnPlatform  COVID-19 Impact on Digital Learning propos
 [Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/basic-analysis-impact-on-digital-learning)
 <br><br><br>
 
-#### Fastpages
-
-🐍 Python  📅 Aug 20, 2021 🕒  10 min read
-
-[<img src="posts/images/fastai.png"  width="90" height="90" align="left">](https://medium.com/@fralfaro/qu%C3%A9-es-el-test-driven-development-7d45160a5a5a)
-Fastpages es una plataforma que te permite crear y alojar un blog con Jupyter Notebooks. <br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/2021-08-20-fastpages)
-<br><br><br>
 
 #### Buenas Prácticas
 
@@ -108,14 +73,6 @@ Consejos que te ayudarán a mejorar tus skills en el desarrollo de software (con
 [Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/2021-08-31-buenas_practicas)
 <br><br><br>
 
-#### Jupyter Book
-
-🐍 Python  📅 Aug 11, 2021 🕒  10 min read
-
-[<img src="posts/images/jb.png"  width="90" height="90" align="left">](https://fralfaro.github.io/blog/posts/2021/2021-08-11-jb)
-Jupyter Book es una herramienta para crear documentos mediante Jupyter Notebooks y/o Markdown.<br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/2021-08-11-jb)
-<br><br><br>
 
 #### RISE
 
