@@ -60,7 +60,7 @@ Polars es una librería de DataFrames increíblemente rápida y eficiente  imple
 
 [<img src="posts/images/learning.jpg"  width="90" height="90" align="left">](https://www.kaggle.com/code/faamds/basic-analysis-impact-on-digital-learning)
 Competition Solution:  LearnPlatform  COVID-19 Impact on Digital Learning proposed by Kaggle.<br>
-[Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/basic-analysis-impact-on-digital-learning)
+[Continue reading ➔](https://fralfaro.github.io/blog/posts/2021/eda_learnplatform)
 <br><br><br>
 
 
