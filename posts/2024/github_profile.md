@@ -24,14 +24,9 @@ colaborar con otros desarrolladores y construir tu marca personal.
 
 En este artículo, te guiaremos paso a paso  para crear un perfil de GitHub completo y profesional.
 
-> 🔑 **Nota**: Para seguir este tutorial, es necesario disponer 
-> de una cuenta en GitHub. 
-> 
-> Además, se recomienda actualizar tu foto de perfil y tu nombre de usuario.  Si aún no lo has hecho, 
-> puedes hacerlo siguiendo estos enlaces:
-> 
-> * [Creación de una cuenta en GitHub](https://docs.github.com/es/get-started/start-your-journey/creating-an-account-on-github)
-> * [Personalizar tu perfil](https://docs.github.com/es/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/personalizing-your-profile)
+> 🔑 **Nota**: Para seguir este tutorial, es necesario disponer de una [Cuenta en GitHub](https://docs.github.com/es/get-started/start-your-journey/creating-an-account-on-github). 
+> Además, se recomienda actualizar tu foto de perfil y tu nombre de usuario.
+
 
 ## Sobre Github Profile
 
@@ -52,33 +47,34 @@ tu habilidad y compromiso en el mundo del desarrollo de software.
 
 ## Crear Github Profile
 
-### Crear un Nuevo Repositorio
-   - Dirígete a la página principal de GitHub y haz clic en el botón "New" (Nuevo) en la esquina superior derecha.
-   - Nombre del repositorio: Debe coincidir exactamente con tu nombre de usuario. Por ejemplo, si tu nombre de usuario es `fralfaro`, el repositorio se llamará `fralfaro`.
-   - Asegúrate de que el repositorio sea "Público".
-   - Selecciona la opción para "Add a README file" (Agregar un archivo README).
-   - Haz clic en "Create repository" (Crear repositorio).
+> 🔑 Nota: Utilizaremos mi propio [perfil de GitHub](https://github.com/fralfaro/) como referencia.
 
-<img src="img/img_01.png" width="750" align="center" />
+### Crear un Nuevo Repositorio
+
+- Dirígete a la página principal de GitHub y haz clic en el botón "New" (Nuevo) en la esquina superior derecha.
+- Nombre del repositorio: Debe coincidir exactamente con tu nombre de usuario. Por ejemplo, si tu nombre de usuario es `fralfaro`, el repositorio se llamará `fralfaro`.
+- Asegúrate de que el repositorio sea "Público".
+- Selecciona la opción para "Add a README file" (Agregar un archivo README).
+  <img src="img/repo.png" width="750" align="center" />
+- Haz clic en "Create repository" (Crear repositorio).
+- La estructura del repositorio será la siguiente:
+  <img src="img/img_01.png" width="750" align="center" />
 
 ### Añadir Información a tu README
-   - Haz clic en el archivo README en tu nuevo repositorio.
-   - Luego, haz clic en el icono del lápiz en la esquina superior derecha para editar el archivo.
-   - Agrega la información que deseas mostrar en tu perfil, como una breve biografía, enlaces a proyectos destacados, etc.
 
-<img src="img/img_02.png" width="750" align="center" />
-
-### Guardar Cambios
-   - Después de editar el README, desplázate hacia abajo y encontrarás el botón "Commit changes" (Confirmar cambios).
-   - Haz clic en este botón para guardar tus modificaciones.
-
-<img src="img/img_03.png" width="750" align="center" />
+- Visita tu perfil de GitHub y verás el siguiente diseño:
+  <img src="img/img_02.png" width="750" align="center" />
+- Luego, haz clic en el icono del lápiz en la esquina superior derecha para editar el archivo.
+  <img src="img/img_03.png" width="750" align="center" />
+- Agrega la información que deseas mostrar en tu perfil, como una breve biografía, enlaces a proyectos destacados, etc.
+- Después de editar el README, desplázate hacia abajo y encontrarás el botón "Commit changes" (Confirmar cambios).
+- Haz clic en este botón para guardar tus modificaciones.
 
 ### Visualizar tu Perfil
-   - Después de guardar los cambios, puedes ver cómo se ve tu perfil.
-   - Visita tu perfil de GitHub y verás las nuevas modificaciones que has realizado en tu README.
+- Después de guardar los cambios, puedes ver cómo se ve tu perfil.
+- Visita tu perfil de GitHub y verás las nuevas modificaciones que has realizado en tu README.
 
-<img src="img/img_04.png" width="750" align="center" />
+  <img src="img/img_04.png" width="750" align="center" />
 
 ¡Listo! Ahora tu perfil de GitHub está configurado con la información que deseas mostrar. 
 Los visitantes podrán conocer más sobre ti y tu trabajo gracias a tu README personalizado.
@@ -86,7 +82,7 @@ Los visitantes podrán conocer más sobre ti y tu trabajo gracias a tu README pe
 ## Github Profile Pro
 
 Para crear un GitHub Profile que refleje tu profesionalismo y destaque tus habilidades como desarrollador,
-te dejamos los siguientes **tips**.
+te dejamos algunos **tips**.
 
 ### Utilizar GitHub Profile README Generator
 
@@ -134,3 +130,4 @@ experiencia y personalidad en la comunidad de desarrollo de software.
 
 4. **Fuente de Inspiración**: Los GitHub Profile pueden servir como fuente de inspiración para otros desarrolladores, proporcionando ejemplos creativos y únicos de cómo presentar su trabajo de manera efectiva en la plataforma.
 
+Al seguir los consejos y las mejores prácticas compartidas en este artículo, puedes crear un perfil de GitHub que refleje tu profesionalismo, creatividad y pasión por la programación. ¡Aprovecha al máximo esta poderosa herramienta y haz que tu GitHub Profile sea un reflejo auténtico de quién eres como desarrollador!.
