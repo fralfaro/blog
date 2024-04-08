@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -205,7 +205,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#generando-archivos-pdf-con-gitlab-cicd" id="toc-generando-archivos-pdf-con-gitlab-cicd" class="nav-link active" data-scroll-target="#generando-archivos-pdf-con-gitlab-cicd">Generando Archivos PDF con GitLab CI/CD</a>
   <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a></li>
   <li><a href="#artefactos-en-gitlab-cicd" id="toc-artefactos-en-gitlab-cicd" class="nav-link" data-scroll-target="#artefactos-en-gitlab-cicd">Artefactos en GitLab CI/CD</a></li>
   <li><a href="#generación-de-archivos-pdf-con-gitlab-cicd" id="toc-generación-de-archivos-pdf-con-gitlab-cicd" class="nav-link" data-scroll-target="#generación-de-archivos-pdf-con-gitlab-cicd">Generación de Archivos PDF con GitLab CI/CD</a>
   <ul class="collapse">
@@ -232,15 +231,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Generando Archivos PDF con GitLab CI/CD</h1>
 <p><img src="../images/gitlab-ci.png" alt="" align="center" width="150"></p>
 <p><br></p>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p><a href="https://docs.gitlab.com/ee/ci/">GitLab CI/CD</a> es una potente herramienta que permite automatizar y gestionar el ciclo de vida de las aplicaciones de software.</p>
 <p>CI (Integración Continua) y CD (Entrega Continua) son prácticas esenciales en el desarrollo de software moderno que buscan mejorar la calidad del código, aumentar la eficiencia y reducir los errores. GitLab CI/CD se integra de manera nativa en el flujo de trabajo de GitLab, lo que lo convierte en una opción atractiva para equipos de desarrollo.</p>
 <ul>
 <li><p><strong>CI (Integración Continua)</strong>: Es el proceso de integrar cambios de código frecuentes en un repositorio compartido. Esto implica la ejecución automática de pruebas y análisis de calidad cada vez que se envía código. El objetivo es identificar y corregir problemas de manera temprana en el ciclo de desarrollo.</p></li>
 <li><p><strong>CD (Entrega Continua)</strong>: Una vez que las pruebas de CI se han superado con éxito, el código se considera apto para su implementación en entornos de producción o de pruebas. El objetivo es entregar de manera eficiente y confiable el software a los usuarios finales.</p></li>
 </ul>
-</section>
 <section id="artefactos-en-gitlab-cicd" class="level2">
 <h2 class="anchored" data-anchor-id="artefactos-en-gitlab-cicd">Artefactos en GitLab CI/CD</h2>
 <p><img src="https://cdn4.iconfinder.com/data/icons/folders-23/140/_Code-512.png" alt="" align="center" width="150"></p>
@@ -577,6 +573,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -618,7 +619,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

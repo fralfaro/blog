@@ -2,10 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2024/github_profile.html",
       "/posts/2023/art_docs.html",
       "/posts/2023/gitlab_pdf.html",
-      "/posts/2022/2021-07-15-tdd.html",
       "/posts/2022/2022-03-16-polars.html",
+      "/posts/2022/2021-07-15-tdd.html",
       "/posts/2021/eda_learnplatform.html",
       "/posts/2021/2021-08-31-buenas_practicas.html",
       "/posts/2021/2021-08-05-rise.html",

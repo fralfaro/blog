@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -240,8 +240,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>El arte de una buena documentación</h1>
 <p><img src="../images/books.png" width="150" align="center"></p>
 <p><br></p>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Esperamos que, si estás leyendo este tutorial, ya comprendas la importancia de documentar tu código. Pero, por si acaso, permíteme citar algo que Guido mencionó en la reciente <a href="https://www.youtube.com/watch?v=YgtL4S7Hrwo&amp;ab_channel=PyCon2016">PyCon 2016</a>:</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -256,10 +254,24 @@ Cita
 <p>“El código se lee más a menudo de lo que se escribe.” — <em><a href="https://gvanrossum.github.io/">Guido van Rossum</a></em></p>
 </div>
 </div>
+<section id="introducción" class="level2">
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Cuando escribes código, lo haces para dos audiencias principales: tus usuarios y tus desarrolladores (incluyéndote a ti mismo). Ambas audiencias son igualmente cruciales. Si eres como yo, es posible que hayas abierto antiguas bases de código y te hayas preguntado: “¿En qué estaba pensando?”. Si tienes dificultades para entender tu propio código, imagina lo que tus usuarios u otros desarrolladores sienten cuando intentan utilizarlo o <strong>contribuir</strong> a tu código.</p>
 <p>Por otro lado, es probable que hayas pasado por situaciones en las que deseabas realizar algo en Python y encontraste lo que parecía ser una excelente biblioteca que podría hacer el trabajo. Sin embargo, al comenzar a usar la biblioteca, buscaste ejemplos, descripciones o incluso documentación oficial sobre cómo realizar una tarea específica y no pudiste encontrar una solución de inmediato.</p>
 <p>Después de buscar durante un tiempo, te das cuenta de que la documentación es insuficiente o, peor aún, está completamente ausente. Esta es una experiencia frustrante que te impide utilizar la biblioteca, sin importar cuán bueno o eficiente sea el código. Daniele Procida resumió esta situación de manera acertada:</p>
-<p>!!! quote “No importa cuán bueno sea tu software, porque <strong>si la documentación no es lo suficientemente buena, la gente no lo usará.</strong>” — <em><a href="https://www.divio.com/en/blog/documentation/">Daniele Procida</a></em></p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cita
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“No importa cuán bueno sea tu software, porque <strong>si la documentación no es lo suficientemente buena, la gente no lo usará.</strong>” — <em><a href="https://www.divio.com/en/blog/documentation/">Daniele Procida</a></em></p>
+</div>
+</div>
 <p>En esta guía, aprenderás desde cero cómo documentar adecuadamente tu código en Python, desde los scripts más pequeños hasta los proyectos más grandes de Python, para evitar que tus usuarios se sientan frustrados al usar o contribuir a tu proyecto.</p>
 </section>
 <section id="comentarios-vs-documentación" class="level2">
@@ -269,7 +281,19 @@ Cita
 <p><strong>Comentarios</strong>:</p>
 <p>En términos generales, los comentarios están diseñados para proporcionar información sobre tu código a los desarrolladores.</p>
 <p>La audiencia principal a la que se dirigen son aquellos que mantienen y trabajan en el código Python. Cuando se combinan con un código bien escrito, los comentarios actúan como guías que ayudan a los lectores a comprender mejor el código, su propósito y su estructura. Esto se alinea perfectamente con la sabia observación de Jeff Atwood,</p>
-<p>!!! quote “El código te dice cómo; los comentarios te dicen por qué.” — <a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">Jeff Atwood</a></p>
+<div class="callout callout-style-simple callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cita
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“El código te dice cómo; los comentarios te dicen por qué.” — <a href="https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/">Jeff Atwood</a></p>
+</div>
+</div>
 <p><strong>Documentación del Código</strong>:</p>
 <p>Por otro lado, la documentación del código se enfoca en describir el uso y la funcionalidad del código a los usuarios. Aunque puede ser útil durante el proceso de desarrollo, su audiencia principal son los usuarios finales del software. La siguiente sección de este artículo se adentrará en cuándo y cómo debes abordar la tarea de comentar tu código en Python.</p>
 </section>
@@ -861,6 +885,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
           // target, if specified
           link.setAttribute("target", "_blank");
           if (link.getAttribute("rel") === null) {
@@ -902,7 +931,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
