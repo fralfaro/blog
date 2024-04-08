@@ -205,9 +205,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#tdd" id="toc-tdd" class="nav-link active" data-scroll-target="#tdd">TDD</a>
   <ul class="collapse">
-  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">Introducción</a>
+  <li><a href="#qué-es-el-test-driven-development" id="toc-qué-es-el-test-driven-development" class="nav-link" data-scroll-target="#qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</a>
   <ul class="collapse">
-  <li><a href="#qué-es-el-test-driven-development" id="toc-qué-es-el-test-driven-development" class="nav-link" data-scroll-target="#qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</a></li>
   <li><a href="#ejemplo-sencillo" id="toc-ejemplo-sencillo" class="nav-link" data-scroll-target="#ejemplo-sencillo">Ejemplo sencillo</a></li>
   </ul></li>
   <li><a href="#porqué-debería-usarlo" id="toc-porqué-debería-usarlo" class="nav-link" data-scroll-target="#porqué-debería-usarlo">¿Porqué debería usarlo?</a></li>
@@ -229,11 +228,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="tdd" class="level1">
 <h1>TDD</h1>
 <p><br></p>
-<section id="introducción" class="level2">
-<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>Esta sección busca dar señales de cómo abordar el desarrollo de software para Data Science usando <em>Test Driven Development</em>, una técnica ampliamente usada en otros rubros de la programación.</p>
-<section id="qué-es-el-test-driven-development" class="level3">
-<h3 class="anchored" data-anchor-id="qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</h3>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: Les comparto de manera complementaria la <a href="https://github.com/fralfaro/portfolio/blob/main/docs/files/talks/MeetupPythonChile_20220929_talk.pdf">charla</a> que impartí en la conferencia de Python Chile sobre Test Driven Development (TDD).</p>
+</blockquote>
+<section id="qué-es-el-test-driven-development" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</h2>
 <p>En palabras simples, el desarrollo guiado por pruebas pone las pruebas en el corazón de nuestro trabajo. En su forma más simple consiste en un proceso iterativo de 3 fases:</p>
 <p><img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/images/tdd/tdd.png" class="img-fluid"></p>
 <ul>
@@ -241,7 +241,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Green</strong>: Escribe el código mínimo necesario para pasar ese test</li>
 <li><strong>Refactor</strong>: Refactoriza de ser necesario</li>
 </ul>
-</section>
 <section id="ejemplo-sencillo" class="level3">
 <h3 class="anchored" data-anchor-id="ejemplo-sencillo">Ejemplo sencillo</h3>
 <p>A modo de ejemplo, vamos a testear la función <code>paridad</code>, que determina si un número natural es par o no.</p>
