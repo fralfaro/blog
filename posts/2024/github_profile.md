@@ -9,7 +9,7 @@ image: "../images/profile.png"
 ---
 
 
-# Personalizando Github
+# Personalizando Github 
 
 <img src="../images/profile.png" width="150" align="center" />
 
@@ -71,7 +71,7 @@ tu habilidad y compromiso en el mundo del desarrollo de software.
 - Haz clic en este botón para guardar tus modificaciones.
 
 ### Visualizar tu Perfil
-- Después de guardar los cambios, puedes ver cómo se ve tu perfil.
+
 - Visita tu perfil de GitHub y verás las nuevas modificaciones que has realizado en tu README.
 
   <img src="img/img_04.png" width="750" align="center" />
