@@ -15,7 +15,6 @@ image: "../images/books.png"
 
 <br>
 
-## Introducción
 
 Esperamos que, si estás leyendo este tutorial, ya comprendas la importancia de documentar tu código. Pero, por si acaso, permíteme citar algo que Guido mencionó en la reciente [PyCon 2016](https://www.youtube.com/watch?v=YgtL4S7Hrwo&ab_channel=PyCon2016):
 
@@ -26,6 +25,8 @@ Esperamos que, si estás leyendo este tutorial, ya comprendas la importancia de 
   "El código se lee más a menudo de lo que se escribe."
     — _[Guido van Rossum](https://gvanrossum.github.io/)_
 :::
+
+## Introducción
 
 Cuando escribes código, lo haces para dos audiencias principales: tus usuarios
 y tus desarrolladores (incluyéndote a ti mismo). Ambas audiencias son
@@ -43,9 +44,14 @@ Después de buscar durante un tiempo, te das cuenta de que la documentación es 
 peor aún, está completamente ausente. Esta es una experiencia frustrante que te impide utilizar 
 la biblioteca, sin importar cuán bueno o eficiente sea el código. Daniele Procida resumió esta situación de manera acertada:
 
-!!! quote
-    "No importa cuán bueno sea tu software, porque **si la documentación no es lo suficientemente buena, la gente no lo usará.**"
+::: {.callout-note appearance="simple"}
+
+## Cita
+
+  "No importa cuán bueno sea tu software, porque **si la documentación no es lo suficientemente buena, la gente no lo usará.**"
     — _[Daniele Procida](https://www.divio.com/en/blog/documentation/)_
+:::
+
 
 En esta guía, aprenderás desde cero cómo documentar adecuadamente tu código 
 en Python, desde los scripts más pequeños hasta los proyectos más grandes de
@@ -69,9 +75,13 @@ trabajan en el código Python. Cuando se combinan con un código bien escrito,
 los comentarios actúan como guías que ayudan a los lectores a comprender mejor el código, 
 su propósito y su estructura. Esto se alinea perfectamente con la sabia observación de Jeff Atwood,
 
-!!! quote
-    "El código te dice cómo; los comentarios te dicen por qué."
+::: {.callout-note appearance="simple"}
+
+## Cita
+
+   "El código te dice cómo; los comentarios te dicen por qué."
     — [Jeff Atwood](https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/)
+:::
 
 **Documentación del Código**:
 

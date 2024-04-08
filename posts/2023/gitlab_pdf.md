@@ -14,8 +14,6 @@ image: "../images/gitlab-ci.png"
 
 <br>
 
-## Introducción 
-
 [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) es una potente herramienta que permite automatizar y gestionar el ciclo de vida de las aplicaciones de software. 
 
 CI (Integración Continua) y CD (Entrega Continua) 
