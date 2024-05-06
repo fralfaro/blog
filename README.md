@@ -11,7 +11,7 @@ A collection of articles covering topics about programming and education (in spa
 
 ## 2024
 
-#### Documentación
+#### Github Actions
 
 :octocat: Github  📅 May 14, 2024 🕒  10 min read
 
