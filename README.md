@@ -33,7 +33,7 @@ Comprender los pasos necesarios para mostrar tus repositorios en Github. <br>
 
 :octocat: Github   📅 Apr 08, 2024 🕒  10 min read
 
-[<img src="posts/images/profile.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2024/github_profile)
+[<img src="posts/images/github_logo2.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2024/github_profile)
 Comprender los pasos necesarios para crear un perfil de GitHub de alta calidad. <br>
 [Continue reading ➔](https://fralfaro.github.io/blog/posts/2024/github_profile) 
 <br><br><br>
