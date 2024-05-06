@@ -8,7 +8,7 @@
 
 <meta name="author" content="Francisco Alfaro">
 
-<title>Personal Blog - Test Driven Development</title>
+<title>Personal Blog - Github Actions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,11 +165,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Test Driven Development</h1>
-            <p class="subtitle lead">Cómo abordar el desarrollo de software para Data Science usando Test Driven Development.</p>
+      <h1 class="title">Github Actions</h1>
+            <p class="subtitle lead">Aprender conceptos básicos de Github Actions y Github Pages.</p>
                                 <div class="quarto-categories">
-                <div class="quarto-category">python</div>
-                <div class="quarto-category">software-development</div>
+                <div class="quarto-category">github</div>
+                <div class="quarto-category">markdown</div>
               </div>
                   </div>
   </div>
@@ -187,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">25 de mayo de 2022</p>
+        <p class="date">14 de mayo de 2024</p>
       </div>
     </div>
     
@@ -203,17 +203,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#tdd" id="toc-tdd" class="nav-link active" data-scroll-target="#tdd">TDD</a>
+  <li><a href="#aprendiendo-sobre-github-actions" id="toc-aprendiendo-sobre-github-actions" class="nav-link active" data-scroll-target="#aprendiendo-sobre-github-actions">Aprendiendo sobre Github Actions</a>
   <ul class="collapse">
-  <li><a href="#qué-es-el-test-driven-development" id="toc-qué-es-el-test-driven-development" class="nav-link" data-scroll-target="#qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</a>
+  <li><a href="#github-actions" id="toc-github-actions" class="nav-link" data-scroll-target="#github-actions">GitHub Actions</a>
   <ul class="collapse">
-  <li><a href="#ejemplo-sencillo" id="toc-ejemplo-sencillo" class="nav-link" data-scroll-target="#ejemplo-sencillo">Ejemplo sencillo</a></li>
+  <li><a href="#qué-es-cicd" id="toc-qué-es-cicd" class="nav-link" data-scroll-target="#qué-es-cicd">¿Qué es CI/CD?</a></li>
+  <li><a href="#qué-es-github-actions" id="toc-qué-es-github-actions" class="nav-link" data-scroll-target="#qué-es-github-actions">¿Qué es GitHub Actions?</a></li>
+  <li><a href="#implementación" id="toc-implementación" class="nav-link" data-scroll-target="#implementación">Implementación</a></li>
   </ul></li>
-  <li><a href="#porqué-debería-usarlo" id="toc-porqué-debería-usarlo" class="nav-link" data-scroll-target="#porqué-debería-usarlo">¿Porqué debería usarlo?</a></li>
-  <li><a href="#evidencia-empírica" id="toc-evidencia-empírica" class="nav-link" data-scroll-target="#evidencia-empírica">Evidencia empírica</a></li>
-  <li><a href="#puedo-usar-tdd-siempre" id="toc-puedo-usar-tdd-siempre" class="nav-link" data-scroll-target="#puedo-usar-tdd-siempre">¿Puedo usar TDD siempre?</a></li>
-  <li><a href="#librerías-disponibles" id="toc-librerías-disponibles" class="nav-link" data-scroll-target="#librerías-disponibles">Librerías disponibles</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">Referencias</a></li>
+  <li><a href="#github-pages" id="toc-github-pages" class="nav-link" data-scroll-target="#github-pages">GitHub Pages</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-github-pages" id="toc-qué-es-github-pages" class="nav-link" data-scroll-target="#qué-es-github-pages">¿Qué es GitHub Pages?</a></li>
+  <li><a href="#configuración" id="toc-configuración" class="nav-link" data-scroll-target="#configuración">Configuración</a></li>
+  <li><a href="#beneficios" id="toc-beneficios" class="nav-link" data-scroll-target="#beneficios">Beneficios</a></li>
+  </ul></li>
+  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico">Ejemplo Práctico</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -225,120 +230,210 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="tdd" class="level1">
-<h1>TDD</h1>
+<section id="aprendiendo-sobre-github-actions" class="level1">
+<h1>Aprendiendo sobre Github Actions</h1>
+<p><img src="img/actions.png" width="500" align="center"></p>
 <p><br></p>
-<p>Esta sección busca dar señales de cómo abordar el desarrollo de software para Data Science usando <em>Test Driven Development</em>, una técnica ampliamente usada en otros rubros de la programación.</p>
-<blockquote class="blockquote">
-<p>🔑 <strong>Nota</strong>: Les comparto de manera complementaria la <a href="https://github.com/fralfaro/portfolio/blob/main/docs/files/talks/MeetupPythonChile_20220929_talk.pdf">charla</a> que impartí en la conferencia de Python Chile sobre Test Driven Development (TDD).</p>
-</blockquote>
-<section id="qué-es-el-test-driven-development" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-el-test-driven-development">¿Qué es el <em>Test Driven Development</em>?</h2>
-<p>En palabras simples, el desarrollo guiado por pruebas pone las pruebas en el corazón de nuestro trabajo. En su forma más simple consiste en un proceso iterativo de 3 fases:</p>
-<p><img src="https://raw.githubusercontent.com/fralfaro/blog/main/posts/images/tdd/tdd.png" class="img-fluid"></p>
+<p>En el acelerado mundo del desarrollo de software, la capacidad de entregar cambios de manera rápida y confiable es esencial para mantenerse competitivo.</p>
+<p>La Integración Continua (CI) y la Entrega Continua (CD) son prácticas fundamentales que permiten a los equipos de desarrollo automatizar y optimizar el proceso de construcción, prueba y despliegue de aplicaciones.</p>
+<p>En este artículo, exploraremos en detalle qué es CI/CD, por qué es importante y cómo puede beneficiar a los equipos de desarrollo, con un enfoque específico en GitHub Actions y GitHub Pages.</p>
+<section id="github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="github-actions">GitHub Actions</h2>
+<section id="qué-es-cicd" class="level3">
+<h3 class="anchored" data-anchor-id="qué-es-cicd">¿Qué es CI/CD?</h3>
+<p>La Integración Continua (CI) es un enfoque en el que los desarrolladores integran su código en un repositorio compartido de manera frecuente, desencadenando automáticamente un proceso de construcción y pruebas para verificar la calidad del código.</p>
+<p>Por otro lado, la Entrega Continua (CD) es una extensión de la CI que se enfoca en automatizar la entrega de software probado y validado a entornos de producción o preproducción de manera rápida y confiable.</p>
+<p><strong>Beneficios de CI/CD</strong></p>
 <ul>
-<li><strong>Red</strong>: Escribe un test que ponga a prueba una nueva funcionalidad y asegurate de que el test falla</li>
-<li><strong>Green</strong>: Escribe el código mínimo necesario para pasar ese test</li>
-<li><strong>Refactor</strong>: Refactoriza de ser necesario</li>
+<li><strong>Mayor Calidad del Software:</strong> La detección temprana de errores y la automatización de pruebas garantizan una mayor calidad del código.</li>
+<li><strong>Entrega Más Rápida:</strong> La automatización de los procesos de construcción y despliegue acelera el tiempo de lanzamiento al mercado.</li>
+<li><strong>Menor Riesgo:</strong> La entrega frecuente y confiable reduce el riesgo de implementaciones fallidas.</li>
+<li><strong>Retroalimentación Instantánea:</strong> Los desarrolladores reciben retroalimentación inmediata sobre la calidad de su código.</li>
+<li><strong>Mayor Colaboración:</strong> La integración frecuente fomenta la colaboración entre los miembros del equipo y mejora la transparencia en el proceso de desarrollo.</li>
 </ul>
-<section id="ejemplo-sencillo" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplo-sencillo">Ejemplo sencillo</h3>
-<p>A modo de ejemplo, vamos a testear la función <code>paridad</code>, que determina si un número natural es par o no.</p>
-<p>Lo primero que se debe hacer es crear el test, para ello se ocupará la librería <a href="https://docs.pytest.org/en/6.2.x/">pytest</a>.</p>
-<blockquote class="blockquote">
-<p><strong>Nota</strong>: No es necesario conocer previamente la librería <code>pytest</code> para entender el ejemplo.</p>
-</blockquote>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">@pytest.mark.parametrize</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"number, expected"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">2</span>, <span class="st">'par'</span>),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_paridad(number, expected):</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> paridad(number) <span class="op">==</span> expected</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>El test nos dice que si el input es el número <code>2</code>, la función <code>paridad</code> devuelve el output <code>'par'</code>. Cómo aún no hemos escrito la función, el test fallará (<strong>fase red</strong>).</p>
-<pre><code>========= test session starts ============================================ 
-platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: /home/fralfaro/PycharmProjects/ds_blog
-plugins: anyio-3.3.0
-collected 1 item                                                                                                                                                                          
-
-temp/test_funcion.py F                                              [100%]
-========= 1 failed in 0.14s  ===============================================</code></pre>
-<p>Ahora, se escribe la función <code>paridad</code> (<strong>fase green</strong>):</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> paridad(n:<span class="bu">int</span>)<span class="op">-&gt;</span><span class="bu">str</span>:</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Determina si un numero natural es par o no.</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">    :param n: numero entero</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">    :return: 'par' si es el numero es par; 'impar' en otro caso</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'par'</span> <span class="cf">if</span> n<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span> <span class="cf">else</span> <span class="st">'impar'</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Volvemos a correr el test:</p>
-<pre><code>========= test session starts ============================================ 
-platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: /home/fralfaro/PycharmProjects/ds_blog
-plugins: anyio-3.3.0
-collected 1 item                                                                                                                                                                          
-
-temp/test_funcion.py .                                              [100%]
-========= 1 passed in 0.06s  ===============================================</code></pre>
-<p>Hemos cometido un descuido a proposito, no hemos testeado el caso si el número fuese impar, por lo cual reescribimos el test (<strong>fase refactor</strong>)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="at">@pytest.mark.parametrize</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"number, expected"</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    [</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">2</span>, <span class="st">'par'</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        (<span class="dv">3</span>, <span class="st">'impar'</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> test_paridad(number, expected):</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> paridad(number) <span class="op">==</span> expected</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>y corremos nuevamente los test:</p>
-<pre><code>========= test session starts ============================================ 
-platform linux -- Python 3.8.10, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: /home/fralfaro/PycharmProjects/ds_blog
-plugins: anyio-3.3.0
-collected 2 items                                                                                                                                                                          
-
-temp/test_funcion.py ..                                              [100%]
-========= 2 passed in 0.06s  ===============================================</code></pre>
-<p>Listo, nuestra función <code>paridad</code> ha sido testeado correctamente!.</p>
+</section>
+<section id="qué-es-github-actions" class="level3">
+<h3 class="anchored" data-anchor-id="qué-es-github-actions">¿Qué es GitHub Actions?</h3>
+<p>GitHub Actions es una plataforma de automatización de flujo de trabajo integrada en GitHub que permite a los equipos de desarrollo automatizar todo el ciclo de vida del desarrollo de software, incluyendo la integración continua (CI) y la entrega continua (CD).</p>
+<p>Con GitHub Actions, los equipos pueden definir flujos de trabajo personalizados en archivos YAML dentro de sus repositorios de GitHub, lo que les permite automatizar tareas como la construcción, las pruebas y el despliegue de aplicaciones de manera fácil y flexible.</p>
+</section>
+<section id="implementación" class="level3">
+<h3 class="anchored" data-anchor-id="implementación">Implementación</h3>
+<p>A continuación, se muestra un ejemplo básico de un archivo YAML de GitHub Actions para un flujo de trabajo de CI/CD:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> CI/CD Pipeline</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">push</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Checkout Repository</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v2</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build and Test</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        npm install</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        npm test</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Deploy to Production</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">if</span><span class="kw">:</span><span class="at"> success()</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">      run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        npm run build</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        # Comandos para desplegar la aplicación en producción</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>En este ejemplo, el flujo de trabajo se desencadena en cada push al branch “main”.</p>
+<p>El flujo de trabajo incluye tres pasos:</p>
+<ol type="1">
+<li>checkout del repositorio,</li>
+<li>construcción y prueba de la aplicación, y</li>
+<li>despliegue de la aplicación en producción si las pruebas son exitosas.</li>
+</ol>
 </section>
 </section>
-<section id="porqué-debería-usarlo" class="level2">
-<h2 class="anchored" data-anchor-id="porqué-debería-usarlo">¿Porqué debería usarlo?</h2>
-<p>Existen varias razones por las que uno debería usar TDD. Entre ellas podemos encontrar: - Formular bien nuestros pensamientos mediante la escritura de un test significativo antes de ponernos a solucionar el problema nos ayuda a clarificar los límites del problema y cómo podemos resolverlo. Con el tiempo esto ayuda a obtener un diseño modular y reusable del código. - Escribir tests ayuda la forma en que escribimos código, haciéndolo más legible a otros. Sin embargo, no es un acto de altruismo, la mayoría de las veces ese otro es tu futuro yo. - Verifica que el código funciona de la manera que se espera, y lo hace de forma automática. - Te permite realizar <em>refactoring</em> con la certeza de que no has roto nada. - Los tests escritos sirven como documentación para otros desarrolladores. - Es una práctica <strong>requerida</strong> en metodologías de desarrollo de software <em>agile</em>.</p>
+<section id="github-pages" class="level2">
+<h2 class="anchored" data-anchor-id="github-pages">GitHub Pages</h2>
+<section id="qué-es-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="qué-es-github-pages">¿Qué es GitHub Pages?</h3>
+<p>GitHub Pages es un servicio de alojamiento web gratuito proporcionado por GitHub que permite a los usuarios crear y publicar sitios web estáticos directamente desde sus repositorios de GitHub.</p>
+<p>Con GitHub Pages, los desarrolladores pueden aprovechar la infraestructura de GitHub para alojar y compartir documentación, sitios web personales, blogs y más. La configuración de GitHub Pages es sencilla, y los sitios web se actualizan automáticamente cada vez que se realiza un cambio en el repositorio, lo que facilita la publicación de contenido nuevo y actualizado.</p>
 </section>
-<section id="evidencia-empírica" class="level2">
-<h2 class="anchored" data-anchor-id="evidencia-empírica">Evidencia empírica</h2>
-<p>El 2008, Nagappan, Maximilien, Bhat y Williams publicaron el paper llamado <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf">Realizing Quality Improvement Through Test Driven Development - Results and Experiences of Four Industrial Teams</a>, en donde estudiaron 4 equipos de trabajo (3 de Microsoft y 1 de IBM), con proyectos que variaban entre las 6000 lineas de código hasta las 155k. Estas son parte de sus conclusiones:</p>
-<blockquote class="blockquote">
-<p>Todos los equipos demostraron una baja considerable en la densidad de defectos: 40% para el equipo de IBM, y entre 60-90% para los equipos de Microsoft.</p>
-</blockquote>
-<p>Como todo en la vida, nada es gratis:</p>
-<blockquote class="blockquote">
-<p>Incremento del tiempo de desarrollo varía entre un 15% a 35%.</p>
-</blockquote>
-<p>Sin embargo</p>
-<blockquote class="blockquote">
-<p>Desde un punto de vista de eficacia este incremento en tiempo de desarrollo se compensa por los costos de mantención reducidos debido al incremento en calidad.</p>
-</blockquote>
-<p>Además, es importante escribir tests junto con la implementación en pequeñas iteraciones. <a href="https://collaboration.csc.ncsu.edu/laurie/Papers/TDDpaperv8.pdf">George y Williams</a> encontraron que escribir tests después de que la aplicación está mas o menos lista hace que se testee menos porque los desarrolladores piensan en menos casos, y además la aplicación se vuelve menos testeable. Otra conclusión interesante del estudio de George y Williams es que un 79% de los desarrolladores experimentaron que el uso de TDD conlleva a un diseño más simple.</p>
+<section id="configuración" class="level3">
+<h3 class="anchored" data-anchor-id="configuración">Configuración</h3>
+<p>Para habilitar GitHub Pages para un repositorio, sigue estos pasos:</p>
+<ol type="1">
+<li>Ve a la pestaña “Settings” (Configuración) de tu repositorio en GitHub.</li>
+<li>Desplázate hacia abajo hasta la sección “GitHub Pages”.</li>
+<li>Selecciona la rama y la carpeta del repositorio que deseas utilizar para publicar tu sitio web.</li>
+<li>Haz clic en “Save” (Guardar).</li>
+</ol>
 </section>
-<section id="puedo-usar-tdd-siempre" class="level2">
-<h2 class="anchored" data-anchor-id="puedo-usar-tdd-siempre">¿Puedo usar TDD siempre?</h2>
-<p>No, pero puedes usarlo casi siempre. El análisis exploratorio es un caso en que el uso de TDD no hace sentido. Una vez que tenemos definido el problema a solucionar y un mejor entendimiento del problema podemos aterrizar nuestras ideas a la implementación vía testing.</p>
-</section>
-<section id="librerías-disponibles" class="level2">
-<h2 class="anchored" data-anchor-id="librerías-disponibles">Librerías disponibles</h2>
-<p>Acá listamos algunas librerías de TDD en Python: - <a href="https://docs.python.org/3/library/unittest.html">unittest</a>: Módulo dentro de la librería estándar de Python. Permite realizar tests unitarios, de integración y end to end. - <a href="https://docs.python.org/3/library/doctest.html">doctest</a>: Permite realizar test de la documentación del código (ejemplos: <a href="http://www.numpy.org/">Numpy</a> o <a href="https://pandas.pydata.org/">Pandas</a>). - <a href="https://docs.pytest.org/en/latest/">pytest</a>: Librería de testing ampliamente usada en proyectos nuevos de Python. - <a href="https://nose.readthedocs.io/en/latest/">nose</a>: Librería que extiende unittest para hacerlo más simple. - <a href="https://coverage.readthedocs.io/en/v4.5.x/">coverage</a>: Herramienta para medir la <a href="https://es.wikipedia.org/wiki/Cobertura_de_c%C3%B3digo">cobertura de código</a> de los proyectos. - <a href="https://tox.readthedocs.io/en/latest/">tox</a>: Herramienta para facilitar el test de una librería en diferentes versiones e intérpretes de Python. - <a href="https://hypothesis.readthedocs.io/en/latest/">hypothesis</a>: Librería para escribir tests vía reglas que ayuda a encontrar casos borde. - <a href="https://behave.readthedocs.io/en/latest/">behave</a>: Permite utilizar <a href="https://es.wikipedia.org/wiki/Desarrollo_guiado_por_comportamiento">Behavior Driven Development</a>, un proceso de desarrollo derivado del TDD.</p>
-</section>
-<section id="referencias" class="level2">
-<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
+<section id="beneficios" class="level3">
+<h3 class="anchored" data-anchor-id="beneficios">Beneficios</h3>
 <ul>
-<li><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2009/10/Realizing-Quality-Improvement-Through-Test-Driven-Development-Results-and-Experiences-of-Four-Industrial-Teams-nagappan_tdd.pdf">Realizing Quality Improvement Through Test Driven Development - Results and Experiences of Four Industrial Teams</a>, es una buena lectura, sobretodo los consejos que dan en las conclusiones.</li>
-<li><a href="https://testing.googleblog.com/">Google Testing Blog</a>: Poseen varios artículos sobre cómo abordar problemas tipo, buenas prácticas de diseño para generar código testeable, entre otros. En particular destaca la serie <em>Testing on the Toilet</em>.</li>
-<li><a href="https://martinfowler.com/tags/testing.html">Cualquier artículo de Martin Fowler sobre testing</a>, empezando por <a href="https://martinfowler.com/articles/practical-test-pyramid.html">éste</a></li>
-<li><a href="https://sourcemaking.com/design_patterns">Design Patterns</a>: Los patrones de diseño de software tienen en consideración que el código sea <em>testeable</em>.</li>
+<li><strong>Facilidad de Uso:</strong> Configuración simple y actualizaciones automáticas hacen que sea fácil publicar y mantener sitios web estáticos.</li>
+<li><strong>Gratuito y Sin Limitaciones:</strong> GitHub Pages es un servicio gratuito y no tiene limitaciones en cuanto a la cantidad de sitios web que puedes alojar.</li>
+<li><strong>Integración con GitHub:</strong> GitHub Pages está integrado directamente en GitHub, lo que facilita la administración y la colaboración en el contenido del sitio web.</li>
 </ul>
+</section>
+</section>
+<section id="ejemplo-práctico" class="level2">
+<h2 class="anchored" data-anchor-id="ejemplo-práctico">Ejemplo Práctico</h2>
+<p>El respositorio a trabajar se denomina <a href="https://github.com/fralfaro/online-cv">Online CV</a> , cuyo proposito es crear tu propio CV online con mkdocs (python).</p>
+<p>El objetivo es mediante github actions y github pages mostrar tu cv de manera online.</p>
+<p><strong>Sobre la estructura del repositorio</strong></p>
+<p><img src="img/gh_01.png" width="750" align="center"></p>
+<ol type="1">
+<li><p><strong>.github/workflows</strong>: Contiene archivos YAML que definen flujos de trabajo automáticos con GitHub Actions. Estos flujos especifican acciones ante eventos específicos como confirmaciones o solicitudes de extracción.</p></li>
+<li><p><strong>docs</strong>: Es el lugar para la documentación del proyecto, usualmente en formatos como Markdown o HTML. Incluye guías de uso, contribución y normas de codificación.</p></li>
+<li><p><strong>.gitignore</strong>: Define qué archivos y carpetas Git debe ignorar. Evita que archivos no deseados se incluyan en los commits o ramas, como archivos de configuración local o dependencias.</p></li>
+<li><p><strong>LICENSE</strong>: Contiene los términos legales de distribución del proyecto, estableciendo los derechos y restricciones para los usuarios. Tipos comunes de licencias son MIT, GPL y Apache.</p></li>
+<li><p><strong>README.md</strong>: Un archivo Markdown que ofrece información básica sobre el proyecto, incluyendo su propósito, instrucciones de instalación y cómo contribuir. Es el primer punto de contacto para desarrolladores y usuarios.</p></li>
+<li><p><strong>mkdocs.yml</strong>: Configura MkDocs, una herramienta para generar documentación estática desde archivos Markdown. Define la estructura y ajustes del proyecto, como los temas y archivos de documentación.</p></li>
+<li><p><strong>pyproject.toml</strong>: Un archivo de configuración en proyectos Python según PEP 518. Define las dependencias del proyecto, versiones de Python compatibles y otras configuraciones usando TOML.</p></li>
+</ol>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: Aunque la estructura para crear otros sitios estáticos con diferentes lenguajes de programación puede variar según los requisitos del proyecto, la lógica para ejecutar GitHub Actions sigue siendo la misma. Esto significa que puedes adaptar estos pasos a tus necesidades específicas, independientemente del lenguaje o la tecnología que estés utilizando.</p>
+</blockquote>
+<p><strong>Utilizando Github Actions</strong></p>
+<p>En la carpeta <code>.github/workflows</code> existe el archivo <code>documentation.yml</code>, que gatilla el pipeline cada vez que se realiza un push.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> documentation</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">push</span><span class="kw">]</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">Pages</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">strategy</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">matrix</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">3.10.x </span><span class="kw">]</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v2</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python ${{ matrix.python-version }}</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v2</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> ${{ matrix.python-version }}</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> pip install poetry</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Activate venv</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> poetry install</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build the book</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">run</span><span class="kw">:</span><span class="at"> poetry run mkdocs build --site-dir public</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> GitHub Pages action</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> peaceiris/actions-gh-pages@v3</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">github_token</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">publish_dir</span><span class="kw">:</span><span class="at"> ./public</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>En primer lugar, se especifica que el trabajo se ejecutará en la plataforma Ubuntu más reciente disponible en GitHub Actions.</p></li>
+<li><p>Se utiliza una estrategia de matriz para ejecutar el trabajo en diferentes versiones de Python. En este caso, se ejecutará en la versión 3.10.x.</p></li>
+<li><p>Los pasos del trabajo comienzan clonando el repositorio utilizando la acción predefinida <code>actions/checkout@v2</code>.</p></li>
+<li><p>Luego, se configura un entorno Python utilizando la acción <code>actions/setup-python@v2</code>, asegurándose de que la versión coincida con la especificada en la matriz.</p></li>
+<li><p>A continuación, se instala la herramienta de gestión de dependencias Poetry mediante el comando <code>pip install poetry</code>.</p></li>
+<li><p>Una vez instaladas las dependencias de Poetry, se ejecuta el comando <code>poetry install</code> para instalar las dependencias del proyecto.</p></li>
+<li><p>Después, se activa el entorno virtual creado por Poetry ejecutando <code>poetry run</code>.</p></li>
+<li><p>Se genera la documentación del proyecto utilizando MkDocs con el comando <code>mkdocs build --site-dir public</code>.</p></li>
+<li><p>Finalmente, se implementa la documentación en GitHub Pages utilizando la acción de terceros <code>peaceiris/actions-gh-pages@v3</code>. Se proporciona el token de acceso de GitHub almacenado en la variable secreta <code>GITHUB_TOKEN</code> y se especifica el directorio de publicación de la documentación como <code>./public</code>.</p></li>
+</ul>
+<p><strong>Activando Github Actions</strong></p>
+<ol type="1">
+<li><p>Dirígete a <strong>Setting -&gt; Actions -&gt; General</strong>:</p>
+<p><img src="img/gh_02.png" width="750" align="center"></p></li>
+<li><p>En <strong>Workflow permissions</strong>, seleccionar <code>Read and write permissions</code> y <code>Allow GitHub Actions to create and approve pull requests</code>, luego guarda los cambios en <code>Save</code>.</p>
+<p><img src="img/gh_03.png" width="750" align="center"></p></li>
+</ol>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: El pipeline se activará automáticamente al realizar tu primer push a la rama <code>main</code>. Asegúrate de tener GitHub Actions activado para que funcione correctamente. Para obtener más detalles, consulta la <a href="https://docs.github.com/en/actions/quickstart">Documentación Oficial de GitHub Actions</a>.</p>
+</blockquote>
+<p><strong>Activando Github Pages</strong></p>
+<ol type="1">
+<li><p>Dirígete a <strong>Setting -&gt; Pages</strong>:</p>
+<p><img src="img/gh_04.png" width="750" align="center"></p></li>
+<li><p>Ir <strong>Branch</strong>, seleccionar <code>gh-pages</code>, luego guarda los cambios en<code>Save</code>.</p>
+<p><img src="img/gh_05.png" width="750" align="center"></p></li>
+</ol>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota </strong>: El pipeline se activará automáticamente al realizar tu primer push a la rama <code>main</code>. Una vez finalizado, podrás llevar a cabo los pasos mencionados anteriormente. Para obtener más detalles, consulta la <a href="https://docs.github.com/en/pages/quickstart">Documentación Oficial de GitHub Pages</a>.</p>
+</blockquote>
+<p><strong>Pipeline en Funcionamiento</strong></p>
+<p>Para verificar que todo esté funcionando correctamente, dirígete a <code>Actions</code> y deberías ver lo siguiente:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/gh_06.png" class="img-fluid figure-img"></p>
+<figcaption>Captura de pantalla de GitHub Actions</figcaption>
+</figure>
+</div>
+<p>Aquí tienes una descripción de lo que ves:</p>
+<ul>
+<li><code>online cv - update april</code>: Representa el commit que desencadenó el pipeline de GitHub Actions.</li>
+<li><code>pages build and deployment</code>: Es el pipeline de trabajo que se ejecuta una vez que el pipeline del commit esté completo.</li>
+</ul>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: Si necesitas más detalles sobre los pipelines, simplemente haz clic en cada uno de ellos. También puedes acceder a los pipelines de trabajo del repositorio <a href="https://github.com/fralfaro/online-cv/actions/runs/8863914827">online-cv/actions</a> para obtener más información.</p>
+</blockquote>
+<p><strong>Acceso a la Documentación</strong></p>
+<p>Una vez completado el proceso, dirígete a tu proyecto. En la parte derecha, donde se muestra la descripción del proyecto, encontrarás el icono de un engranaje ⚙️.</p>
+<p>Haz clic en él y verás una imagen similar a esta:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/gh_07.png" class="img-fluid figure-img"></p>
+<figcaption>Configuración de GitHub Pages</figcaption>
+</figure>
+</div>
+<p>Selecciona la opción <code>Use your GitHub Pages website</code> y verás automáticamente debajo de la descripción el enlace hacia la documentación generada por GitHub Actions y GitHub Pages.</p>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: La documentación de este proyecto está disponible en el siguiente enlace: <a href="https://fralfaro.github.io/online-cv/">fralfaro.github.io/online-cv/</a></p>
+</blockquote>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>En conclusión, hemos implementado con éxito GitHub Actions y GitHub Pages en nuestro proyecto, lo que ha mejorado significativamente su gestión y visibilidad:</p>
+<ol type="1">
+<li><p><strong>GitHub Actions</strong>: Configuramos flujos de trabajo automatizados que se activan en respuesta a eventos específicos, como los cambios en el repositorio. Estos flujos de trabajo automatizan tareas como la generación de la documentación del proyecto utilizando MkDocs y la implementación de esta documentación en GitHub Pages.</p></li>
+<li><p><strong>GitHub Pages</strong>: Configuramos GitHub Pages para desplegar automáticamente la documentación generada por nuestros flujos de trabajo de GitHub Actions. Esto proporciona un acceso fácil y conveniente a la documentación del proyecto para los colaboradores y usuarios potenciales.</p></li>
+</ol>
+<p>En conjunto, estas herramientas nos permiten mantener la documentación del proyecto actualizada de manera automática y proporcionar un acceso rápido y sencillo a esta documentación a través de GitHub Pages. Esto mejora la colaboración y la visibilidad del proyecto, facilitando su uso y contribución para todos los involucrados.</p>
 
 
 </section>
