@@ -9,7 +9,7 @@ image: "../images/profile.png"
 ---
 
 
-# Personalizando Github 
+# Perfil de GitHub como un Profesional
 
 <img src="../images/profile.png" width="150" align="center" />
 

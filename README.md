@@ -9,6 +9,37 @@ A collection of articles covering topics about programming and education (in spa
 
 ## Posts
 
+## 2024
+
+#### Documentación
+
+:octocat: Github  📅 May 14, 2024 🕒  10 min read
+
+[<img src="posts/images/actions2.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2024/github_actions)
+Aprender conceptos básicos de Github Actions y Github Pages. <br>
+[Continue reading ➔](https://fralfaro.github.io/blog/posts/2024/github_actions) 
+<br><br><br>
+
+#### Github Repository
+
+:octocat: Github   📅 May 07, 2024 🕒  10 min read
+
+[<img src="posts/images/repos3.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2024/github_repos)
+Comprender los pasos necesarios para mostrar tus repositorios en Github. <br>
+[Continue reading ➔](https://fralfaro.github.io/blog/posts/2024/github_repos) 
+<br><br><br>
+
+#### Github Profile
+
+:octocat: Github   📅 Apr 08, 2024 🕒  10 min read
+
+[<img src="posts/images/profile.png"  width="90"  align="left">](https://fralfaro.github.io/blog/posts/2024/github_profile)
+Comprender los pasos necesarios para crear un perfil de GitHub de alta calidad. <br>
+[Continue reading ➔](https://fralfaro.github.io/blog/posts/2024/github_profile) 
+<br><br><br>
+
+
+
 ## 2023
 
 #### Documentación

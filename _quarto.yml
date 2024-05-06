@@ -17,7 +17,7 @@ website:
       - icon: globe
         href: https://fralfaro.github.io/portfolio/
       - icon: pencil
-        href: https://fralfaro.github.io/blog/
+        href: https://github.com/fralfaro/blog
 
     
   navbar:
@@ -32,7 +32,7 @@ website:
       - icon: globe
         href: https://fralfaro.github.io/portfolio/
       - icon: pencil
-        href: https://fralfaro.github.io/blog/
+        href: https://github.com/fralfaro/blog
 
 lang: es
 
