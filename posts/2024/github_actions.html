@@ -217,7 +217,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configuración" id="toc-configuración" class="nav-link" data-scroll-target="#configuración">Configuración</a></li>
   <li><a href="#beneficios" id="toc-beneficios" class="nav-link" data-scroll-target="#beneficios">Beneficios</a></li>
   </ul></li>
-  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico">Ejemplo Práctico</a></li>
+  <li><a href="#ejemplo-práctico" id="toc-ejemplo-práctico" class="nav-link" data-scroll-target="#ejemplo-práctico">Ejemplo Práctico</a>
+  <ul class="collapse">
+  <li><a href="#sobre-la-estructura-del-repositorio" id="toc-sobre-la-estructura-del-repositorio" class="nav-link" data-scroll-target="#sobre-la-estructura-del-repositorio">Sobre la estructura del repositorio</a></li>
+  <li><a href="#utilizando-github-actions" id="toc-utilizando-github-actions" class="nav-link" data-scroll-target="#utilizando-github-actions">Utilizando Github Actions</a></li>
+  <li><a href="#activando-github-pages" id="toc-activando-github-pages" class="nav-link" data-scroll-target="#activando-github-pages">Activando Github Pages</a></li>
+  <li><a href="#pipeline-en-funcionamiento" id="toc-pipeline-en-funcionamiento" class="nav-link" data-scroll-target="#pipeline-en-funcionamiento">Pipeline en Funcionamiento</a></li>
+  <li><a href="#acceso-a-la-documentación" id="toc-acceso-a-la-documentación" class="nav-link" data-scroll-target="#acceso-a-la-documentación">Acceso a la Documentación</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul></li>
   </ul>
@@ -234,9 +241,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Aprendiendo sobre Github Actions</h1>
 <p><img src="img/actions.png" width="500" align="center"></p>
 <p><br></p>
-<p>En el acelerado mundo del desarrollo de software, la capacidad de entregar cambios de manera rápida y confiable es esencial para mantenerse competitivo.</p>
-<p>La Integración Continua (CI) y la Entrega Continua (CD) son prácticas fundamentales que permiten a los equipos de desarrollo automatizar y optimizar el proceso de construcción, prueba y despliegue de aplicaciones.</p>
-<p>En este artículo, exploraremos en detalle qué es CI/CD, por qué es importante y cómo puede beneficiar a los equipos de desarrollo, con un enfoque específico en GitHub Actions y GitHub Pages.</p>
+<p>En el vertiginoso mundo del desarrollo de software, la capacidad de implementar cambios de forma rápida y fiable se ha vuelto crucial para mantenerse competitivo. La Integración Continua (CI) y la Entrega Continua (CD) son prácticas fundamentales que permiten a los equipos de desarrollo automatizar y optimizar el ciclo completo de construcción, pruebas y despliegue de aplicaciones.</p>
+<p>En este artículo, exploraremos los conceptos de CI/CD y su importancia para los equipos de desarrollo, centrándonos en GitHub Actions y GitHub Pages. Además, aprenderemos cómo aplicar estos conceptos en la generación de documentación y sitios web estáticos mediante un ejemplo práctico.</p>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>: Para seguir este tutorial, es necesario disponer de una <a href="https://docs.github.com/es/get-started/start-your-journey/creating-an-account-on-github">Cuenta en GitHub</a>. Además, se recomienda actualizar tu foto de perfil y tu nombre de usuario.</p>
+</blockquote>
 <section id="github-actions" class="level2">
 <h2 class="anchored" data-anchor-id="github-actions">GitHub Actions</h2>
 <section id="qué-es-cicd" class="level3">
@@ -322,10 +331,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ejemplo-práctico" class="level2">
 <h2 class="anchored" data-anchor-id="ejemplo-práctico">Ejemplo Práctico</h2>
-<p>El respositorio a trabajar se denomina <a href="https://github.com/fralfaro/online-cv">Online CV</a> , cuyo proposito es crear tu propio CV online con mkdocs (python).</p>
-<p>El objetivo es mediante github actions y github pages mostrar tu cv de manera online.</p>
-<p><strong>Sobre la estructura del repositorio</strong></p>
-<p><img src="img/gh_01.png" width="750" align="center"></p>
+<p>El repositorio <a href="https://github.com/fralfaro/online-cv">Online CV</a> tiene como propósito facilitar la creación de tu propio currículum vitae en línea utilizando mkdocs (python).</p>
+<p>El objetivo principal es utilizar GitHub Actions y GitHub Pages para mostrar tu CV de manera online. Sería ideal que los usuarios clonaran el repositorio utilizando la opción <strong>fork</strong> o <strong>Use this template</strong> para poder personalizar su propio currículum vitae.</p>
+<p><img src="img/clone.png" width="800" align="center"></p>
+<blockquote class="blockquote">
+<p>🔑 <strong>Nota</strong>:</p>
+<ul>
+<li>Más información sobre <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo">forks</a>.</li>
+<li>Más información sobre <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template">template</a>.</li>
+</ul>
+</blockquote>
+<section id="sobre-la-estructura-del-repositorio" class="level3">
+<h3 class="anchored" data-anchor-id="sobre-la-estructura-del-repositorio">Sobre la estructura del repositorio</h3>
+<p><img src="img/gh_01.png" width="800" align="center"></p>
 <ol type="1">
 <li><p><strong>.github/workflows</strong>: Contiene archivos YAML que definen flujos de trabajo automáticos con GitHub Actions. Estos flujos especifican acciones ante eventos específicos como confirmaciones o solicitudes de extracción.</p></li>
 <li><p><strong>docs</strong>: Es el lugar para la documentación del proyecto, usualmente en formatos como Markdown o HTML. Incluye guías de uso, contribución y normas de codificación.</p></li>
@@ -338,7 +356,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>🔑 <strong>Nota</strong>: Aunque la estructura para crear otros sitios estáticos con diferentes lenguajes de programación puede variar según los requisitos del proyecto, la lógica para ejecutar GitHub Actions sigue siendo la misma. Esto significa que puedes adaptar estos pasos a tus necesidades específicas, independientemente del lenguaje o la tecnología que estés utilizando.</p>
 </blockquote>
-<p><strong>Utilizando Github Actions</strong></p>
+</section>
+<section id="utilizando-github-actions" class="level3">
+<h3 class="anchored" data-anchor-id="utilizando-github-actions">Utilizando Github Actions</h3>
 <p>En la carpeta <code>.github/workflows</code> existe el archivo <code>documentation.yml</code>, que gatilla el pipeline cada vez que se realiza un push.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> documentation</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">push</span><span class="kw">]</span></span>
@@ -386,7 +406,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>🔑 <strong>Nota</strong>: El pipeline se activará automáticamente al realizar tu primer push a la rama <code>main</code>. Asegúrate de tener GitHub Actions activado para que funcione correctamente. Para obtener más detalles, consulta la <a href="https://docs.github.com/en/actions/quickstart">Documentación Oficial de GitHub Actions</a>.</p>
 </blockquote>
-<p><strong>Activando Github Pages</strong></p>
+</section>
+<section id="activando-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="activando-github-pages">Activando Github Pages</h3>
 <ol type="1">
 <li><p>Dirígete a <strong>Setting -&gt; Pages</strong>:</p>
 <p><img src="img/gh_04.png" width="750" align="center"></p></li>
@@ -396,7 +418,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>🔑 <strong>Nota </strong>: El pipeline se activará automáticamente al realizar tu primer push a la rama <code>main</code>. Una vez finalizado, podrás llevar a cabo los pasos mencionados anteriormente. Para obtener más detalles, consulta la <a href="https://docs.github.com/en/pages/quickstart">Documentación Oficial de GitHub Pages</a>.</p>
 </blockquote>
-<p><strong>Pipeline en Funcionamiento</strong></p>
+</section>
+<section id="pipeline-en-funcionamiento" class="level3">
+<h3 class="anchored" data-anchor-id="pipeline-en-funcionamiento">Pipeline en Funcionamiento</h3>
 <p>Para verificar que todo esté funcionando correctamente, dirígete a <code>Actions</code> y deberías ver lo siguiente:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -412,7 +436,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>🔑 <strong>Nota</strong>: Si necesitas más detalles sobre los pipelines, simplemente haz clic en cada uno de ellos. También puedes acceder a los pipelines de trabajo del repositorio <a href="https://github.com/fralfaro/online-cv/actions/runs/8863914827">online-cv/actions</a> para obtener más información.</p>
 </blockquote>
-<p><strong>Acceso a la Documentación</strong></p>
+</section>
+<section id="acceso-a-la-documentación" class="level3">
+<h3 class="anchored" data-anchor-id="acceso-a-la-documentación">Acceso a la Documentación</h3>
 <p>Una vez completado el proceso, dirígete a tu proyecto. En la parte derecha, donde se muestra la descripción del proyecto, encontrarás el icono de un engranaje ⚙️.</p>
 <p>Haz clic en él y verás una imagen similar a esta:</p>
 <div class="quarto-figure quarto-figure-center">
@@ -425,6 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>🔑 <strong>Nota</strong>: La documentación de este proyecto está disponible en el siguiente enlace: <a href="https://fralfaro.github.io/online-cv/">fralfaro.github.io/online-cv/</a></p>
 </blockquote>
+</section>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
