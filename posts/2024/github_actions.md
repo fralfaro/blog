@@ -16,18 +16,18 @@ image: "../images/actions2.png"
 <br>
 
 
-En el acelerado mundo del desarrollo de software, 
-la capacidad de entregar cambios de manera rápida y confiable es
-esencial para mantenerse competitivo. 
+En el vertiginoso mundo del desarrollo de software, la capacidad
+de implementar cambios de forma rápida y fiable se ha vuelto crucial
+para mantenerse competitivo. La Integración Continua (CI) y la Entrega
+Continua (CD) son prácticas fundamentales que permiten a los equipos 
+de desarrollo automatizar y optimizar el ciclo completo de construcción,
+pruebas y despliegue de aplicaciones.
 
-La Integración Continua (CI) y
-la Entrega Continua (CD) son prácticas fundamentales que permiten a los
-equipos de desarrollo automatizar y optimizar el proceso de construcción,
-prueba y despliegue de aplicaciones.
+En este artículo, exploraremos los conceptos de CI/CD y su importancia para los equipos de desarrollo, centrándonos en GitHub Actions y GitHub Pages. Además, aprenderemos cómo aplicar estos conceptos en la generación de documentación y sitios web estáticos mediante un ejemplo práctico.
 
-En este artículo, exploraremos en detalle qué es CI/CD, 
-por qué es importante y cómo puede beneficiar a los equipos de desarrollo, 
-con un enfoque específico en GitHub Actions y GitHub Pages.
+> 🔑 **Nota**: Para seguir este tutorial, es necesario disponer de una [Cuenta en GitHub](https://docs.github.com/es/get-started/start-your-journey/creating-an-account-on-github). 
+> Además, se recomienda actualizar tu foto de perfil y tu nombre de usuario.
+
 
 ## GitHub Actions
 
@@ -139,16 +139,26 @@ Para habilitar GitHub Pages para un repositorio, sigue estos pasos:
 
 ## Ejemplo Práctico
 
-El respositorio a trabajar se denomina [Online CV](https://github.com/fralfaro/online-cv) , cuyo proposito es
-crear tu propio CV online con mkdocs (python).
+El repositorio [Online CV](https://github.com/fralfaro/online-cv) tiene 
+como propósito facilitar la creación de tu propio currículum vitae en línea utilizando
+mkdocs (python).
 
-El objetivo es mediante github actions y github pages mostrar tu cv de manera online.
+El objetivo principal es utilizar GitHub Actions y GitHub Pages para mostrar
+tu CV de manera online. Sería ideal que los usuarios clonaran el repositorio utilizando
+la opción **fork** o **Use this template** para poder personalizar su propio currículum vitae.
+
+<img src="img/clone.png" width="800" align="center" />
 
 
-**Sobre la estructura del repositorio**
+> 🔑 **Nota**: 
+> 
+> * Más información sobre [forks](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo).
+> * Más información sobre [template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+
+### Sobre la estructura del repositorio
 
 
-<img src="img/gh_01.png" width="750" align="center" />
+<img src="img/gh_01.png" width="800" align="center" />
 
 1. **.github/workflows**: Contiene archivos YAML que definen flujos de trabajo automáticos con GitHub Actions. Estos flujos especifican acciones ante eventos específicos como confirmaciones o solicitudes de extracción.
 
@@ -169,7 +179,7 @@ El objetivo es mediante github actions y github pages mostrar tu cv de manera on
 > los requisitos del proyecto, la lógica para ejecutar GitHub Actions sigue siendo la misma. 
 > Esto significa que puedes adaptar estos pasos a tus necesidades específicas, independientemente del lenguaje o la tecnología que estés utilizando.
 
-**Utilizando Github Actions**
+### Utilizando Github Actions
 
 En la carpeta `.github/workflows` existe el archivo `documentation.yml`, que gatilla el pipeline cada vez que se realiza un push.
 
@@ -234,7 +244,7 @@ Allow GitHub Actions to create and approve pull requests`, luego guarda los camb
 > la rama `main`. Asegúrate de tener GitHub Actions activado para que funcione correctamente.
 > Para obtener más detalles, consulta la [Documentación Oficial de GitHub Actions](https://docs.github.com/en/actions/quickstart).
 
-**Activando Github Pages**
+### Activando Github Pages
 
 1. Dirígete a **Setting -> Pages**:
 
@@ -248,7 +258,7 @@ Allow GitHub Actions to create and approve pull requests`, luego guarda los camb
 > rama `main`. Una vez finalizado, podrás llevar a cabo los pasos mencionados anteriormente. 
 > Para obtener más detalles, consulta la [Documentación Oficial de GitHub Pages](https://docs.github.com/en/pages/quickstart).
 
-**Pipeline en Funcionamiento**
+### Pipeline en Funcionamiento
 
 Para verificar que todo esté funcionando correctamente,
 dirígete a `Actions` y deberías ver lo siguiente:
@@ -264,7 +274,7 @@ Aquí tienes una descripción de lo que ves:
 > simplemente haz clic en cada uno de ellos. También puedes acceder a los pipelines de trabajo del repositorio [online-cv/actions](https://github.com/fralfaro/online-cv/actions/runs/8863914827) para obtener más información.
 
 
-**Acceso a la Documentación**
+### Acceso a la Documentación
 
 Una vez completado el proceso, dirígete a tu proyecto. En la parte derecha, donde 
 se muestra la descripción del proyecto, encontrarás el icono de un engranaje ⚙️.

@@ -85,28 +85,21 @@ dividir este proceso en dos partes distintas, adaptadas a diferentes propósitos
 
 **Para Proyectos**:
 
-1. **Descripción Breve:**
-   - Título claro y breve descripción del proyecto.
+1. **Descripción Breve:** Título claro y breve descripción del proyecto.
 
-2. **Instrucciones de Uso:**
-   - Pasos para instalar y utilizar el proyecto.
+2. **Instrucciones de Uso:** Pasos para instalar y utilizar el proyecto.
 
-3. **Contribuciones:**
-   - Guía para contribuir al proyecto.
+3. **Contribuciones:** Guía para contribuir al proyecto.
 
-4. **Licencia:**
-   - Información sobre la licencia del proyecto.
+4. **Licencia:** Información sobre la licencia del proyecto.
 
 **Para Portafolios**:
 
-1. **Descripción Breve:**
-   - Título claro y breve descripción del portafolio.
+1. **Descripción Breve:** Título claro y breve descripción del portafolio.
 
-2. **Lista de Proyectos:**
-   - Títulos y descripciones breves de proyectos anteriores.
+2. **Lista de Proyectos:** Títulos y descripciones breves de proyectos anteriores.
 
-3. **Tecnologías Utilizadas:**
-   - Destacar las tecnologías empleadas en cada proyecto.
+3. **Tecnologías Utilizadas:** Destacar las tecnologías empleadas en cada proyecto.
 
 ### Para proyectos
 
@@ -197,14 +190,36 @@ dividir este proceso en dos partes distintas, adaptadas a diferentes propósitos
    - Sugiere que los usuarios pueden obtener más detalles sobre cada proyecto consultando los directorios correspondientes en el repositorio, lo que facilita la navegación y la búsqueda de información adicional.
 
      <img src="img/repo_13.png" width="750" align="center" />
-
     
+## Awesome README
+
+<img src="img/awesome-readme.png" width="750" align="center" />
+
+Una valiosa fuente de inspiración y orientación en este sentido 
+es el repositorio [awesome-readme](https://github.com/matiassingers/awesome-readme) creado por **Matías Singers** en GitHub.
+Este repositorio recopila una amplia variedad de ejemplos inspiradores y recursos útiles para la creación de READMEs impresionantes.
+
+Desde estructuras organizadas hasta consejos prácticos y ejemplos de READMEs destacados, "awesome-readme" ofrece una amplia gama de recursos para ayudarte a mejorar la presentación y documentación de tus proyectos en GitHub.
+
+Al explorar este repositorio, los desarrolladores pueden encontrar ideas innovadoras, plantillas útiles y ejemplos reales que les ayudarán a crear READMEs que destaquen entre la multitud y comuniquen eficazmente el valor de sus proyectos.
+
+
+
+
 ## Conclusión
 
-Dominar la presentación de tus proyectos en GitHub es clave para avanzar en tu carrera profesional. Este tutorial te ha mostrado cómo personalizar tus repositorios de manera efectiva, ya sea para proyectos de software o portafolios profesionales. Al seguir estas prácticas recomendadas, puedes:
+La presentación de tus proyectos en GitHub es clave para avanzar en tu carrera profesional. 
+Este tutorial te ha mostrado cómo personalizar tus repositorios de manera efectiva, 
+ya sea para proyectos de software o portafolios profesionales. 
+
+Al seguir estas prácticas recomendadas, puedes:
 
 * Atraer la atención de potenciales colaboradores y usuarios.
 * Comunicar claramente el valor de tus proyectos.
 * Fomentar la colaboración y el crecimiento de la comunidad.
 * Demostrar tus habilidades y experiencia de manera efectiva.
 * Destacar entre otros repositorios y aumentar la visibilidad de tu trabajo.
+
+Al dominar la presentación de tus proyectos en GitHub, puedes mejorar significativamente
+tu presencia en línea, impulsar tu carrera profesional y abrir nuevas oportunidades de colaboración y 
+crecimiento.
