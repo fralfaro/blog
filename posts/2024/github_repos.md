@@ -111,7 +111,7 @@ dividir este proceso en dos partes distintas, adaptadas a diferentes propósitos
 ### Para proyectos
 
 > 🔑 **Nota:** Para una referencia sobre la estructura y contenido de un README de Proyectos,
->  utilizaremos el siguiente proyecto como ejemplo: [Proyecto Inventado](https://github.com/fralfaro/). 
+>  utilizaremos el siguiente proyecto como ejemplo: [Proyecto Inventado](https://github.com/fralfaro/Github-Intro/blob/main/docs/github-readme/02-project.md). 
 
 
 1. **Título y Logotipo:**
@@ -171,7 +171,7 @@ dividir este proceso en dos partes distintas, adaptadas a diferentes propósitos
 ### Para portafolio
 
 > 🔑 **Nota:** Para una referencia sobre la estructura y contenido de un README de Portafolio,
->  utilizaremos el siguiente proyecto como ejemplo: [Curso de Desarrollo Web](https://github.com/fralfaro/). 
+>  utilizaremos el siguiente proyecto como ejemplo: [Curso de Desarrollo Web](https://github.com/fralfaro/Github-Intro/blob/main/docs/github-readme/01a-web-development.md). 
 
 
 1. **Título:**
