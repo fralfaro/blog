@@ -74,4 +74,6 @@ public
 _site
 /.quarto/
 docs
+__more__
 _others_
+_freeze
