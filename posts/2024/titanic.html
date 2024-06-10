@@ -173,7 +173,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                                 <div class="quarto-categories">
                 <div class="quarto-category">python</div>
                 <div class="quarto-category">great_tables</div>
-                <div class="quarto-category">polars</div>
+                <div class="quarto-category">itables</div>
               </div>
                   </div>
   </div>
@@ -218,6 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">📝 Feature Engineering</a>
   <ul class="collapse">
+  <li><a href="#apply-feature-engineering" id="toc-apply-feature-engineering" class="nav-link" data-scroll-target="#apply-feature-engineering">Apply Feature Engineering</a></li>
   <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1">Conclusion</a></li>
   </ul></li>
   <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning">🤖 Machine Learning</a>
@@ -251,6 +252,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Machine Learning:</strong> Using the cleaned and engineered dataset, we’ll apply various machine learning algorithms to build predictive models. These models will help us identify the factors most strongly associated with survival and allow us to predict the survival probability of passengers based on their attributes.</p></li>
 </ol>
 <p>By the end of this analysis, we aim to have a robust model that can accurately predict the likelihood of survival for individuals on the Titanic, providing insights into how different characteristics influenced the chances of surviving one of history’s most infamous maritime disasters.</p>
+<blockquote class="blockquote">
+<p>🔑 <strong>Note</strong>: To learn more about this challenge, we invite you to use the following resources:</p>
+<ul>
+<li><a href="https://fralfaro.github.io/Titanic-Challenge/">📖 Docs</a>: Official documentation of the Titanic Challenge (using MkDocs together with GitHub Actions and GitHub Pages).</li>
+<li><a href="https://titanic-challenge-fralfaro.streamlit.app/">👑 Streamlit</a>: An interactive way to learn about the Titanic Challenge (featuring amazing libraries like <code>great_tables</code>, <code>itables</code>, <code>plotly</code> and more!).</li>
+</ul>
+</blockquote>
 </section>
 <section id="eda" class="level2">
 <h2 class="anchored" data-anchor-id="eda">📊 EDA</h2>
@@ -377,9 +385,7 @@ Total object columns: 5
 Object columns: ['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked']</code></pre>
 </div>
 </div>
-<blockquote class="blockquote">
-<p>🔑<strong>Note</strong>: In this case, the ‘Age’ column should be an integer, but it contains null values (or NaN), which automatically converts it to a float type column. For now, let’s treat it as a float type column.</p>
-</blockquote>
+<p>In this case, the ‘Age’ column should be an integer, but it contains null values (or NaN), which automatically converts it to a float type column. For now, let’s treat it as a float type column.</p>
 </section>
 <section id="about-eda" class="level3">
 <h3 class="anchored" data-anchor-id="about-eda">About EDA</h3>
@@ -1198,6 +1204,15 @@ Tables</code></pre>
 <p>Feature engineering is a crucial step in the data preprocessing pipeline, aimed at enhancing the predictive power of machine learning models. For the Titanic dataset, this involves creating new features and modifying existing ones to better capture the underlying patterns that influence passenger survival.</p>
 <p>The Titanic dataset includes various columns such as ‘Pclass’, ‘Name’, ‘Sex’, ‘Age’, ‘SibSp’, ‘Parch’, ‘Ticket’, ‘Fare’, ‘Cabin’, and ‘Embarked’. Each of these features holds potential insights into the survival outcomes, but they often require transformation and enrichment to become more effective for predictive modeling.</p>
 <p>Feature engineering is an iterative process that involves experimenting with different transformations and evaluating their impact on model performance. By carefully crafting and selecting features, we can significantly improve the accuracy and robustness of predictive models for the Titanic dataset.</p>
+<section id="apply-feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="apply-feature-engineering">Apply Feature Engineering</h3>
+<p>This stage offers numerous opportunities for a deeper analysis, especially when comparing with other columns. However, for our practical purposes, we will follow this approach:</p>
+<ul>
+<li>We will remove the ‘Name’ and ‘Ticket’ columns, as they do not initially contribute significantly to the model.</li>
+<li>For the ‘Age’ variable, we will fill the missing values with the mean age.</li>
+<li>We will address the ‘Cabin’ column by replacing the missing values with the most frequent value, thus optimizing data integrity.</li>
+<li>We will change the data type of the ‘Pclass’, ‘SibSp’, and ‘Parch’ variables.</li>
+</ul>
 <div id="faf655ff-3696-4201-b7cc-502cafbd12ad" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>logger.info(<span class="st">"Remove variables: 'Name' and 'Ticket'"</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1430,6 +1445,7 @@ Tables</code></pre>
 </div>
 </div>
 </div>
+</section>
 <section id="conclusion-1" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion-1">Conclusion</h3>
 <p>In our feature engineering process for the Titanic dataset, we undertook several steps to prepare the data for effective modeling:</p>
